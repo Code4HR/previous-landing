@@ -38,16 +38,17 @@
             <div class="nav-collapse collapse">
               <ul class="nav">
                 <li class="active"><a href="#">Home</a></li>
-                <li><a href="#about">Events</a></li>
+                <li><a href="#meetup">Events</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <!-- Read about Bootstrap dropdowns at http://twitter.github.com/bootstrap/javascript.html#dropdowns -->
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources <b class="caret"></b></a>
                   <ul class="dropdown-menu">
-                    <li><a href="#">Google Groups Forum</a></li>
-                    <li><a href="#">Code on GitHub</a></li>
-                    <li><a href="#">#cfabrigadehr - Local Tweets</a></li>
-                    <li><a href="#">#cfabrigade - National Tweets</a></li>
+                    <li><a href="https://groups.google.com/a/codeforamerica.org/forum/#!forum/hrva-brigade">
+                      Google Groups Forum</a></li>
+                    <li><a href="https://github.com/brigade-hrva">Code on GitHub</a></li>
+                    <li><a href="https://twitter.com/search?q=%23cfabrigadehr">#cfabrigadehr - Local Tweets</a></li>
+                    <li><a href="https://twitter.com/search?q=%23cfabrigade">#cfabrigade - National Tweets</a></li>
                     <li class="divider"></li>
                     <li class="nav-header">Nav header</li>
                     <li><a href="#">Separated link</a></li>
@@ -99,10 +100,8 @@
         <div class="span4">
           <img src="images/captain.png">
           <h2>Come To Our Meetups</h2>
-          <p><a href="">A casual meetup, usually bi-weekly</a> and often near Lynnhaven Mall... 
-            to hack on our ideas for the city and community, whiteboard problems and solutions, 
-            and work with locals and city staff to get things done.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
+          <p>A casual <a href="http://www.meetup.com/cfabrigade/Virginia-Beach-VA/">meetup</a>, usually bi-weekly.</p>
+          <p><a class="btn" href="#meetup">View details &raquo;</a></p>
         </div><!-- /.span4 -->
        
         <div class="span4">
@@ -110,16 +109,14 @@
           <h2>Join Online Discussions</h2>
           <p><a href="https://groups.google.com/a/codeforamerica.org/forum/#!forum/hrva-brigade">
             An open conversation online</a> about what we're doing now and what's next.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
+          <p><a class="btn" href="#groups">View details &raquo;</a></p>
         </div><!-- /.span4 -->
        
         <div class="span4">
           <img src="images/cfa_logo_greyscale.png">
           <h2>See Our Inspiration</h2>
           <p><a href="http://codeforamerica.org/">Code for America</a> is the organization that helped inspire 
-            us to change our City and get involved. Read <a href="http://codeforamerica.org/programs/">what they do</a>, or watch the 
-            <a href="http://codeforamerica.org/2012/03/08/jennifer-pahlka-at-ted-video/">
-              inspirational TED talk given by Jennifer Pahlka, the founder of Code for America.</a>
+            us to change our City and get involved. 
           </p>
           <p><a class="btn" href="#">View details &raquo;</a></p>
         </div><!-- /.span4 -->
@@ -137,14 +134,14 @@
           which means we're volunteers that contribute 
           our talents toward improving the way our local governments and community organizations use the web. 
           Brigade is about action and you're here because you are someone who takes action. 
-          <a href="http://brigade.codeforamerica.org/pages/activities">See what kind of things brigades do</a>.</p>
-      </div>
-
+          <a href="http://brigade.codeforamerica.org/pages/activities">See what kind of things brigades do</a>, or watch the 
+            <a href="http://codeforamerica.org/2012/03/08/jennifer-pahlka-at-ted-video/">
+              inspirational TED talk given by Jennifer Pahlka, the founder of Code for America.</a>
       <hr class="featurette-divider">
 
       <div class="featurette">
         <img class="featurette-image pull-left" src="images/meetup.jpg">
-        <h2 class="featurette-heading">We Meet Often. <span class="muted">Come Join Us.</span></h2>
+        <h2 name="meetup" id="meetup" class="featurette-heading">We Meet Often. <span class="muted">Come Join Us.</span></h2>
         <p class="lead">View our Meetups site for our next location and time. We try to meet every few 
           Wednesdays where we sometimes hack (develop) our projects, do some project planning, 
           or brainstorm on current issues or current Virginia Beach City activities. Thinking of coming? Great, we need 
@@ -155,7 +152,7 @@
 
       <div class="featurette">
         <img class="featurette-image pull-right" src="images/google_groups.png">
-        <h2 class="featurette-heading">We Discuss Things Online. <span class="muted">Join and Introduce Yourself.</span></h2>
+        <h2 name="groups" id="groups" class="featurette-heading">We Discuss Things Online. <span class="muted">Join and Introduce Yourself.</span></h2>
         <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
       </div>
 
@@ -163,7 +160,7 @@
 
       <div class="featurette">
         <img class="featurette-image pull-right" src="../assets/img/examples/browser-icon-safari.png">
-        <h2 class="featurette-heading">Want Even More Info? <span class="muted">Contact Us.</span></h2>
+        <h2 name="contact" id="contact" class="featurette-heading">Want Even More Info? <span class="muted">Contact Us.</span></h2>
         <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
       </div>
 
