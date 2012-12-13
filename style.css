@@ -7,7 +7,9 @@
       padding-bottom: 40px;
       color: #5a5a5a;
     }
-
+    .lead li{
+      margin-bottom: 10px;
+    }
 
 
     /* CUSTOMIZE THE NAVBAR
@@ -79,6 +81,7 @@
 
     .carousel .item {
       height: 500px;
+
     }
     .carousel img {
       position: absolute;
@@ -89,11 +92,13 @@
     }
 
     .carousel-caption {
-      background-color: transparent;
+      background-color: rgba(0,0,0,0.5);
       position: static;
       max-width: 650px;
-      padding: 0 20px;
+      padding: 10px 0px 20px 20px;
       margin-top: 200px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
     }
     .carousel-caption h1,
     .carousel-caption .lead {
@@ -213,9 +218,11 @@
         height: 300px;
       }
       .carousel-caption {
-        width: 65%;
-        padding: 0 70px;
-        margin-top: 100px;
+        width: 96%;
+        padding: 10px;
+        margin-top: 56px;
+        text-align: center;
+        max-width: 767px;
       }
       .carousel-caption h1 {
         font-size: 30px;
