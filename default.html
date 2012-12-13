@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="favicon.ico" />
     <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -41,18 +42,21 @@
                 <li><a href="#meetup">Events</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <!-- Read about Bootstrap dropdowns at http://twitter.github.com/bootstrap/javascript.html#dropdowns -->
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources <b class="caret"></b></a>
+                <li class="dropdown" id="menu1">
+                  <a href="#menu1" class="dropdown-toggle" data-toggle="dropdown">
+                    Resources 
+                    <b class="caret"></b>
+                  </a>
                   <ul class="dropdown-menu">
                     <li><a href="https://groups.google.com/a/codeforamerica.org/forum/#!forum/hrva-brigade">
-                      Google Groups Forum</a></li>
-                    <li><a href="https://github.com/brigade-hrva">Code on GitHub</a></li>
-                    <li><a href="https://twitter.com/search?q=%23cfabrigadehr">#cfabrigadehr - Local Tweets</a></li>
-                    <li><a href="https://twitter.com/search?q=%23cfabrigade">#cfabrigade - National Tweets</a></li>
+                      Our Google Groups Forum</a></li>
+                    <li><a href="https://github.com/brigade-hrva">Our Code on GitHub</a></li>
+                    <li><a href="http://citycamphrva.uservoice.com/forums/103669-help-us-create-an-agenda-citycamp-hrva">
+                      Idea List for Civic Apps/Open Data</a></li>
                     <li class="divider"></li>
-                    <li class="nav-header">Nav header</li>
-                    <li><a href="#">Separated link</a></li>
-                    <li><a href="#">One more separated link</a></li>
+                    
+                    <li><a href="https://twitter.com/search?q=%23cfabrigade">#cfabrigade - National Tweets</a></li>
+                    <li><a href="http://citycamphrva.govfresh.com/">Kevin's Open Data Blog</a></li>
                   </ul>
                 </li>
               </ul>
@@ -65,9 +69,9 @@
 
 
 
-    <!-- Carousel
+    <!-- Carousel - but not using at the moment
     ================================================== -->
-    <div id="myCarousel" class="carousel slide">
+    <div class="carousel slide">
       <div class="carousel-inner">
         <div class="item active">
           <img src="images/sunup.jpg" alt="">
@@ -75,9 +79,8 @@
             <div class="carousel-caption">
               <h1>We Are Code For Virginia Beach.</h1>
               <p class="lead">
-                Come join developers, designers, leaders, and idea-makers who volunteer to help Virginia Beach 
-                Government and Civic Orgs adopt open technologies. We solve problems and want to increase 
-                citizen engagement with our City and each other.
+                Come join developers, designers, data geeks, leaders, and idea-makers who volunteer to help Virginia Beach 
+                government and civic orgs adopt open web technologies.
               </p>
               <a class="btn btn-large btn-primary" 
                 href="http://www.meetup.com/cfabrigade/Virginia-Beach-VA/">Stop By Our Meetups</a>
@@ -116,19 +119,34 @@
           <img src="images/cfa_logo_greyscale.png">
           <h2>See Our Inspiration</h2>
           <p><a href="http://codeforamerica.org/">Code for America</a> is the organization that helped inspire 
-            us to change our City and get involved. 
+            many of us that we can change our City. 
           </p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
+          <p><a class="btn" href="#cfa">View details &raquo;</a></p>
         </div><!-- /.span4 -->
       </div><!-- /.row -->
 
 
       <!-- START THE FEATURETTES -->
 
+ <hr class="featurette-divider">
+
+      <div class="featurette">
+        <img class="featurette-image pull-left" src="images/noun_project_756_citizen.png">
+        <h2 class="featurette-heading">Take Action Now. <span class="muted">Here's What We're Working On.</span></h2>
+        <p class="lead">
+          <ul>
+            <li class="lead">HRT Bus Route Real-Time Mobile App</li>
+            <li class="lead">Clean The Bay Day: Google Form for Cleanup Reporting</li>
+            <li class="lead">Adopt-a-Program: Online App/Map To Find Public Spots Needing Adopting</li>
+            <li class="lead"><a href="http://citycamphrva.uservoice.com/forums/103669-innovate-for-hampton-roads">List of Future Ideas!</a> Submit your Own Ideas, or Pick One To Help With</li>
+          </ul>
+        </p>
+      </div>
+
   <hr class="featurette-divider">
 
       <div class="featurette">
-        <img class="featurette-image pull-right" src="images/cfa_brigade_logo.png">
+        <img name="cfa" id="cfa" class="featurette-image pull-right" src="images/cfa_brigade_logo.png">
         <h2 class="featurette-heading">Want To Help Your City? <span class="muted">Good, we could use your help.</span></h2>
         <p class="lead">We are a <a href="http://brigade.codeforamerica.org/">Code for America Brigade</a>, 
           which means we're volunteers that contribute 
@@ -136,12 +154,14 @@
           Brigade is about action and you're here because you are someone who takes action. 
           <a href="http://brigade.codeforamerica.org/pages/activities">See what kind of things brigades do</a>, or watch the 
             <a href="http://codeforamerica.org/2012/03/08/jennifer-pahlka-at-ted-video/">
-              inspirational TED talk given by Jennifer Pahlka, the founder of Code for America.</a>
+              inspirational TED talk given by Jennifer Pahlka, the founder of Code for America.</a></p>
+      </div>
+      
       <hr class="featurette-divider">
 
       <div class="featurette">
-        <img class="featurette-image pull-left" src="images/meetup.jpg">
-        <h2 name="meetup" id="meetup" class="featurette-heading">We Meet Often. <span class="muted">Come Join Us.</span></h2>
+        <img name="meetup" id="meetup" class="featurette-image pull-left" src="images/meetup.jpg">
+        <h2 class="featurette-heading">We Meet Often. <span class="muted">Come Join Us.</span></h2>
         <p class="lead">View our Meetups site for our next location and time. We try to meet every few 
           Wednesdays where we sometimes hack (develop) our projects, do some project planning, 
           or brainstorm on current issues or current Virginia Beach City activities. Thinking of coming? Great, we need 
@@ -151,17 +171,19 @@
       <hr class="featurette-divider">
 
       <div class="featurette">
-        <img class="featurette-image pull-right" src="images/google_groups.png">
-        <h2 name="groups" id="groups" class="featurette-heading">We Discuss Things Online. <span class="muted">Join and Introduce Yourself.</span></h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        <img name="groups" id="groups" class="featurette-image pull-right" src="images/google_groups.png">
+        <h2 class="featurette-heading">We Discuss Things Online. <span class="muted">Join and Introduce Yourself.</span></h2>
+        <p class="lead">
+          Can't make it to a meetup?  No problem. We colaborate on projects, ask for help, and post wins 
+          to our <a href="https://groups.google.com/a/codeforamerica.org/forum/#!forum/hrva-brigade">Code for Hampton Roads" forum</a> where you can get new posts in email and reply. We welcome anyone to sign-up... you might just see something you're interested in helping with.</p>
       </div>
 
       <hr class="featurette-divider">
 
       <div class="featurette">
-        <img class="featurette-image pull-right" src="../assets/img/examples/browser-icon-safari.png">
-        <h2 name="contact" id="contact" class="featurette-heading">Want Even More Info? <span class="muted">Contact Us.</span></h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        <img name="contact" id="contact" class="featurette-image pull-right" src="">
+        <h2 class="featurette-heading">Want Even More Info? <span class="muted">Contact Us.</span></h2>
+        <p class="lead">Our Brigade organizers Kevin Curry (<a href="mailto:kevin@codeforamerica.org">kevin@codeforamerica.org</a>) and Bret Fisher (<a href="mailto:bret@fishbrains.com">bret@fishbrains.com</a>) would love to hear from you.</p>
       </div>
 
       <hr class="featurette-divider">
@@ -172,11 +194,11 @@
       <!-- FOOTER -->
       <footer>
         <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>People Trying to Make Virginia Beach Better...</p>
+        <p>...People Trying to Make Virginia Beach Even Better...</p>
+        <p>Built and Maintained by CfVB (Hey that's us). Site Design Based on <a href="http://twitter.github.com/bootstrap">Bootstrap</a>, Some Images Provided by <a href="http://thenounproject.com">The Noun Project</a>.</p>
       </footer>
 
     </div><!-- /.container -->
-
 
 
 
