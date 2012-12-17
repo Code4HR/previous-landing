@@ -5,11 +5,9 @@ Landing page for Code for Virginia Beach
 
 #How to Code for this Repo
 Option A: Fork, Edit, then Pull Request when ready.
-Option B: If in the Hampton Road's Brigade and you have write access to repo: Develop/test in your own branch, preferablly a feature-named-branch, and once it's ready for production, merge from master. BUT: Continous Integration is eanbled on master branch.
+Option B: If in the Hampton Road's Brigade and you have write access to repo: Develop/test in your own branch, preferablly a feature-named-branch, and once it's ready for production, merge into gh-pages, which auto deploys to GitHub pages for codeforvirginiabeach.org
 
-**Master branch commits auto-update production** on Windows Azure and will be pulled from github once Azure detects a new commit to master. Careful not to dev in master directly unless it's just spelling/word change.
-
-Also, it's nice if you merge/commit to master, that you [let the team know on our Google Group](https://groups.google.com/a/codeforamerica.org/forum/#!forum/hrva-brigade). 
+Also, it's nice if you merge/commit to gh-pages, that you [let the team know on our Google Group](https://groups.google.com/a/codeforamerica.org/forum/#!forum/hrva-brigade). 
 
 #License
 [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)
