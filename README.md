@@ -16,4 +16,4 @@ Also, it's nice if you merge/commit to gh-pages, that you [let the team know on 
 This repo and the site codeforvirginiabeach.org uses Twitter Bootstrap and started from their [Carousel jumbotron](http://twitter.github.com/bootstrap/examples/carousel.html) template. They are awesome.
 
 #Issues, Questions, Wana Help?
-We take Pull Requests! See http://codeforvirginiabeach.org for getting involved, and http://codeforamerica.org if outside Hampton Roads, Virginia. Use github's issues if you see a problem or have a feature request. You can contact the maintainer Bret Fisher at bret@fishbrains.com or @BretFisher.
+We take Pull Requests! See http://codeforvirginiabeach.org for getting involved, and http://codeforamerica.org if outside Hampton Roads, Virginia. Use github's issues if you see a problem or have a feature request. You can contact the maintainer Bret Fisher at me@bfish.us or @BretFisher.
