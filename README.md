@@ -3,6 +3,8 @@ http://codeforvirginiabeach.org
 
 Landing page for Code for Virginia Beach
 
+Note that branch `gh-pages` is what shows on production codeforvirginiabeach.org. Master does nothing.
+
 #How to Code for this Repo
 Option A: Fork, Edit, then Pull Request when ready.
 Option B: If in the Hampton Road's Brigade and you have write access to repo: Develop/test in your own branch, preferablly a feature-named-branch, and once it's ready for production, merge into gh-pages, which auto deploys to GitHub pages for codeforvirginiabeach.org
