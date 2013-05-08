@@ -311,8 +311,8 @@ $(function() {
         
         // YOU ARE GETTING THE NEXT UPCOMING EVENT ID. 
         // TO REPLICATE, SWITCH TO PAST EVENT, YOU HAVE THE ID, THEN GET ALL CHECKINS THERE
-        	var pastEventId = "113850802";
-        	$.getJSON("https://api.meetup.com/2/checkins?key=02f79626a462ad15683f216361606&sign=true&event_id="+pastEventId+"&page=20&callback=?",function(checkinData) {
+        	// var pastEventId = "113850802";
+        	$.getJSON("https://api.meetup.com/2/checkins?key=02f79626a462ad15683f216361606&sign=true&event_id="+eventId+"&page=20&callback=?",function(checkinData) {
         		$.each(checkinData.results, function(io,checkinData){
         			var dataMemberId = checkinData.member_id;
         			var memberPixSum = "";
