@@ -307,6 +307,7 @@ $(function() {
   	$.getJSON("http://api.meetup.com/2/events?status=upcoming&order=time&limited_events=False&group_urlname=Code-for-Hampton-Roads&desc=false&offset=0&format=json&page=20&fields=&sig_id=7997287&sig=1e967902e7837fbd5625d4397b299dc608a6943d&callback=?",function(upcomingData) {
         $.each(upcomingData.results, function(i,upcomingData){
         	var eventId = upcomingData.id;
+        	console.log(eventId);
 
         
         // YOU ARE GETTING THE NEXT UPCOMING EVENT ID. 
