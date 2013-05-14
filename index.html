@@ -36,7 +36,6 @@
 .carousel-caption .pix-thumb{position:relative; min-width:45px; margin-right:5px; border-radius:6px; width:45px; height:45px}
 .membercheckin{margin-top:20px; color:#fff}
 .carousel-caption{margin-top:100px}
-
 .tip{display:inline-block; position:relative}
 </style>
   </head>
@@ -294,68 +293,44 @@
 
     </div><!-- /.container -->
   </body>
-<script src='bootstrap-tooltip.js'></script>
+<script src="bootstrap-tooltip.js"></script>
 <script>
 $(function() {
-		if ($(".carousel-caption").length) {
-			
-			var memberbox = "<div class='memberbox'><h2>Members Checked In:</h2></div>";
-			$(memberbox).appendTo(".carousel-caption");
-
-		
-  $(document).ready(function(){
-  	$.getJSON("http://api.meetup.com/2/events?status=upcoming&order=time&limited_events=False&group_urlname=Code-for-Hampton-Roads&desc=false&offset=0&format=json&page=20&fields=&sig_id=7997287&sig=1e967902e7837fbd5625d4397b299dc608a6943d&callback=?",function(upcomingData) {
+  if ($(".carousel-caption").length) {
+    var memberbox = "<div class='memberbox'><h2>Members Checked In:</h2></div>";
+    $(memberbox).appendTo(".carousel-caption");	
+    $(document).ready(function(){
+      $.getJSON("http://api.meetup.com/2/events?status=upcoming&order=time&limited_events=False&group_urlname=Code-for-Hampton-Roads&desc=false&offset=0&format=json&page=20&fields=&sig_id=7997287&sig=1e967902e7837fbd5625d4397b299dc608a6943d&callback=?",function(upcomingData) {
         $.each(upcomingData.results, function(i,upcomingData){
-        	var eventId = upcomingData.id;
-        	console.log(eventId);
-
-        
-        // YOU ARE GETTING THE NEXT UPCOMING EVENT ID. 
-        // TO REPLICATE, SWITCH TO PAST EVENT, YOU HAVE THE ID, THEN GET ALL CHECKINS THERE
-        	// var pastEventId = "113850802";
-        	$.getJSON("https://api.meetup.com/2/checkins?key=02f79626a462ad15683f216361606&sign=true&event_id="+eventId+"&page=20&callback=?",function(checkinData) {
-        		$.each(checkinData.results, function(io,checkinData){
-        			var dataMemberId = checkinData.member_id;
-        			var memberPixSum = "";
-        			
-        			$.getJSON("https://api.meetup.com/2/member/"+checkinData.member_id+"?key=02f79626a462ad15683f216361606&&sign=true&page=20&callback=?", function(memberData) {
-        				var toolTips = "<a class='tip' href='#' data-toggle='tooltip' data-placement='bottom' data-original-title='"+memberData.name+"'>";
-        				var memberPix = "<img alt='"+memberData.name+"' class='pix-thumb' src='"+memberData.photo.photo_link+"' />";
-        				toolTips+=memberPix;
-        				toolTips+="</a>";
-        				memberPixSum+=toolTips;
-        				$(memberPixSum).appendTo(".memberbox");
-        				$('.tip').tooltip();
-        				
-        				
-        			});
-        		});
-        	
-        	});
-        	
-        	return (eventId < 1);
-        	
+          var eventId = upcomingData.id;
+          console.log(eventId);
+          // YOU ARE GETTING THE NEXT UPCOMING EVENT ID. 
+          // TO REPLICATE, SWITCH TO PAST EVENT, YOU HAVE THE ID, THEN GET ALL CHECKINS THERE
+          var pastEventId = "116054562";
+          $.getJSON("https://api.meetup.com/2/checkins?key=02f79626a462ad15683f216361606&sign=true&event_id="+pastEventId+"&page=20&callback=?",function(checkinData) {
+            $.each(checkinData.results, function(io,checkinData){
+              var dataMemberId = checkinData.member_id;
+              var memberPixSum = "";
+              $.getJSON("https://api.meetup.com/2/member/"+checkinData.member_id+"?key=02f79626a462ad15683f216361606&&sign=true&page=20&callback=?", function(memberData) {
+                var toolTips = "<a class='tip' href='#' data-toggle='tooltip' data-placement='bottom' data-original-title='"+memberData.name+"'>";
+                var memberPix = "<img alt='"+memberData.name+"' class='pix-thumb' src='"+memberData.photo.photo_link+"' />";
+                toolTips+=memberPix;
+                toolTips+="</a>";
+                memberPixSum+=toolTips;
+                $(memberPixSum).appendTo(".memberbox");
+                $(".tip").tooltip();	
+              });
+            });
+          });
+          return (eventId < 1);
+        });
       });
-     });
-    return false;
-  });
-  
-  		} else {
-  		  var notFoundContent = "<h1>Ain't Shit Here!</h1>";
-  		  $(notFoundContent).appendTo("#meetupcheckins");
-  		}
-  		
-  		
-// 		if ($(".memberbox .tip").length) {		
-// tooltips
-// $('.tip').tooltip();
-// $(".pix-thumb").tooltip();
-//  		}  		
-  		
+      return false;
+    });
+  } else {
+      var notFoundContent = "<h1>Ain't Shit Here!</h1>";
+      $(notFoundContent).appendTo("#meetupcheckins");
+  }		
 });
-
-
-
-
 </script>
 </html>
