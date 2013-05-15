@@ -303,17 +303,28 @@ $(function() {
 			var memberbox = "<div class='memberbox'><!--<h2>Members Checked In:</h2>--></div>";
 			$(memberbox).appendTo(".carousel-caption");
 
-		
   $(document).ready(function(){
+<<<<<<< HEAD
 
     $.getJSON("http://api.meetup.com/2/events?status=upcoming&order=time&limited_events=False&group_urlname=Code-for-Hampton-Roads&desc=false&offset=0&format=json&page=20&fields=&sig_id=7997287&sig=1e967902e7837fbd5625d4397b299dc608a6943d&callback=?",function(upcomingData) {
         $.each(upcomingData.results, function(i,upcomingData){
         var eventId = upcomingData.id;
+=======
+  	$.getJSON("http://api.meetup.com/2/events?status=upcoming&order=time&limited_events=False&group_urlname=Code-for-Hampton-Roads&desc=false&offset=0&format=json&page=20&fields=&sig_id=7997287&sig=1e967902e7837fbd5625d4397b299dc608a6943d&callback=?",function(upcomingData) {
+        console.log(upcomingData.results[0]);
+        $.each(upcomingData.results, function(i,upcomingData){
+        	//var eventId = upcomingData.id;
+          console.log(upcomingData);
+>>>>>>> gh-pages
         	console.log(eventId);
         
         // YOU ARE GETTING THE NEXT UPCOMING EVENT ID. 
         // TO REPLICATE, SWITCH TO PAST EVENT, YOU HAVE THE ID, THEN GET ALL CHECKINS THERE
+<<<<<<< HEAD
         	//var eventId = "113850802";
+=======
+        	var eventId = "113850802";
+>>>>>>> gh-pages
         	$.getJSON("https://api.meetup.com/2/checkins?key=02f79626a462ad15683f216361606&sign=true&event_id="+eventId+"&page=20&callback=?",function(checkinData) {
             var howMany = checkinData.meta.count;        		
 
