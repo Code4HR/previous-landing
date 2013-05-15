@@ -303,11 +303,9 @@ $(function() {
       $.getJSON("http://api.meetup.com/2/events?status=upcoming&order=time&limited_events=False&group_urlname=Code-for-Hampton-Roads&desc=false&offset=0&format=json&page=20&fields=&sig_id=7997287&sig=1e967902e7837fbd5625d4397b299dc608a6943d&callback=?",function(upcomingData) {
         $.each(upcomingData.results, function(i,upcomingData){
           var eventId = upcomingData.id;
-          console.log(eventId);
           // YOU ARE GETTING THE NEXT UPCOMING EVENT ID. 
-          // TO REPLICATE, SWITCH TO PAST EVENT, YOU HAVE THE ID, THEN GET ALL CHECKINS THERE
-          var pastEventId = "116054562";
-          $.getJSON("https://api.meetup.com/2/checkins?key=02f79626a462ad15683f216361606&sign=true&event_id="+pastEventId+"&page=20&callback=?",function(checkinData) {
+          // TO REPLICATE, SWITCH TO PAST EVENT, YOU HAVE THE ID, THEN GET ALL CHECKINS THERE  test id -> var pastEventId = "116054562";
+          $.getJSON("https://api.meetup.com/2/checkins?key=02f79626a462ad15683f216361606&sign=true&event_id="+eventId+"&page=20&callback=?",function(checkinData) {
             $.each(checkinData.results, function(io,checkinData){
               var dataMemberId = checkinData.member_id;
               var memberPixSum = "";
@@ -328,8 +326,8 @@ $(function() {
       return false;
     });
   } else {
-      var notFoundContent = "<h1>Ain't Shit Here!</h1>";
-      $(notFoundContent).appendTo("#meetupcheckins");
+      var notFoundContent = "<h1>no content found</h1>";
+      $(notFoundContent).appendTo(".memberbox");
   }		
 });
 </script>
