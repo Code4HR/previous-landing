@@ -350,7 +350,7 @@ $(function() {
                       $('#event').html("<a href="+data.event_url+">"+data.name+"</a>");
                       $('#who').html(data.group.who);
                       $('#event_url').attr("href",data.event_url);
-                      $('#maps').attr("href","http://maps.google.com/maps?q="+data.venue.address_1+data.venue.city+data.venue.state);
+                      $('#maps').attr("href","http://maps.google.com/maps?q="+data.venue.address_1+" "+data.venue.city+" "+data.venue.state);
                   });
                 }); 
 
