@@ -102,6 +102,7 @@
     }
     .carousel-caption #checkins {
       color: #CCCCCC;
+      padding: .5em 0 0 0;
     }
     .carousel-caption h1,
     .carousel-caption .lead {

@@ -298,89 +298,78 @@
 <script>
 $(function() {  	
 
-    if ( $(".carousel-caption").length)  {
-      console.log($(".carousel-caption").length);
-			var memberbox = "<div class='memberbox'><!--<h2>Members Checked In:</h2>--></div>";
-			$(memberbox).appendTo(".carousel-caption");
-
-		
   $(document).ready(function(){
 
-    $.getJSON("http://api.meetup.com/2/events?status=upcoming&order=time&limited_events=False&group_urlname=Code-for-Hampton-Roads&desc=false&offset=0&format=json&page=20&fields=&sig_id=7997287&sig=1e967902e7837fbd5625d4397b299dc608a6943d&callback=?",function(upcomingData) {
-        $.each(upcomingData.results, function(i,upcomingData){
-        var eventId = upcomingData.id;
-        	console.log(eventId);
-        
-        // YOU ARE GETTING THE NEXT UPCOMING EVENT ID. 
-        // TO REPLICATE, SWITCH TO PAST EVENT, YOU HAVE THE ID, THEN GET ALL CHECKINS THERE
-        	//var eventId = "113850802";
-        	$.getJSON("https://api.meetup.com/2/checkins?key=02f79626a462ad15683f216361606&sign=true&event_id="+eventId+"&page=20&callback=?",function(checkinData) {
-            var howMany = checkinData.meta.count;        		
+    //get the next event
+    $.getJSON("http://api.meetup.com/2/events?status=upcoming&order=time&limited_events=False&group_urlname=Code-for-Hampton-Roads&desc=false&offset=0&format=json&page=20&fields=&sig_id=7997287&sig=1e967902e7837fbd5625d4397b299dc608a6943d&callback=?",function(upcomingData) { 
 
-            $.each(checkinData.results, function(io,checkinData){
-        			var dataMemberId = checkinData.member_id;
-        			var memberPixSum = "";
-        			
-        			$.getJSON("https://api.meetup.com/2/member/"+checkinData.member_id+"?key=02f79626a462ad15683f216361606&&sign=true&page=20&callback=?", function(memberData) {
-        				var toolTips = "<a class='tip' href='#' data-toggle='tooltip' data-placement='bottom' data-original-title='"+memberData.name+"'>";
-        				var memberPix = "<img alt='"+memberData.name+"' class='pix-thumb' src='"+memberData.photo.photo_link+"' />";
-        				toolTips+=memberPix;
-        				toolTips+="</a>";
-        				memberPixSum+=toolTips;
-        				$(memberPixSum).appendTo(".memberbox");
-        				$('.tip').tooltip();
+      //eventId = upcomingData.results[0].id;
 
-        			});
-        		});
-        	 
-          $.getJSON("https://api.meetup.com/2/events?key=02f79626a462ad15683f216361606&sign=true&event_id="+eventId+"&page=20&callback=?", function(data) {
-                    $.each(data.results, function(i, data){
-                      $('#location').html(data.venue.name);
-                      $('#event').html("<a href="+data.event_url+">"+data.name+"</a>");
-                      $('#who').html(data.group.who);
-                      $('#event_url').attr("href",data.event_url);
-                      $('#maps').attr("href","http://maps.google.com/maps?q="+data.venue.address_1+" "+data.venue.city+" "+data.venue.state);
-                  });
-                }); 
+      //testing value for eventId
+      eventId = "113850802";
 
-                var div_metadata = "<div id='checkins'>"+howMany+" </span><span id='who'></span> have checked in at <a id='maps' href='#'><span id='location'></span></a> for <a id='event_url' href='#'><span id='event'></span></p></a></div>";
+      //get the checkin data for the next event
+      $.getJSON("https://api.meetup.com/2/checkins?key=02f79626a462ad15683f216361606&sign=true&event_id="+eventId+"&page=20&callback=?",function(checkinData) {
+
+          howMany = checkinData.meta.count;
+
+          //if there's nobody checked in, there's nothing to see here.  
+          if (howMany === 0) {
+
+            console.log("nobody signed up.");
+
+          //else, let's get those thumbnails up and running.  
+          } else if (howMany >= 1) {
       
-                
-                if (howMany >= 1) { 
+            var memberbox = "<div class='memberbox'></div>";
+            $(".carousel-caption").append(memberbox);
 
-                    $(div_metadata).appendTo(".carousel-caption");
+            $.each(checkinData.results, function(i,checkinData) {
 
-                } else { 
+              console.log(checkinData.member_id);
 
-                  //do nothing
+              $.getJSON("https://api.meetup.com/2/member/"+checkinData.member_id+"?key=02f79626a462ad15683f216361606&&sign=true&page=20&callback=?", function(memberData) { 
+                  
+                  var memberName = memberData.name,
+                      toolTips = "<a class='tip' href='#' data-toggle='tooltip' data-placement='bottom' data-original-title='"+memberData.name+"'>", 
+                      memberPix  = memberData.photo.thumb_link,
+                      memberThumb = toolTips +"<img class='pix-thumb' src='"+memberPix+"' alt='"+ memberData.name +"'/></a>";
 
-                }
+                  $(".memberbox").append(memberThumb);
+                  $('.tip').tooltip();
+
+              });
+
+            });
+
+            //event information  
+            $.getJSON("https://api.meetup.com/2/events?key=02f79626a462ad15683f216361606&sign=true&event_id="+eventId+"&page=20&callback=?", function(eventData) { 
+
+                var eventName = eventData.results[0].name,
+                    eventLocation = eventData.results[0].venue.name,
+                    eventStAddress = eventData.results[0].venue.address_1,
+                    eventCity = eventData.results[0].venue.city,
+                    eventState = eventData.results[0].venue.state,
+                    eventURL = eventData.results[0].event_url,
+                    eventCheckin = "<p id='checkins'>"+howMany+" Civic Hackers are checked in at <a href='http://maps.google.com/maps?q="+eventStAddress+" "+eventCity+" "+eventState+"'>"+eventLocation+"</a> for <a href='"+eventURL+"'>"+eventName+"</a>.</p>";
+
+                $(".memberbox").append(eventCheckin);
+
+            });
+
+            
+          }
 
 
-        	});
-        	
-        	return (eventId < 1);
-        	
+
       });
-     });
-    return false;
+
+
+      });
+
+    });
+
   });
-  
-  		} else {
-  		  var notFoundContent = "<h1>Ain't Shit Here!</h1>";
-  		  $(notFoundContent).appendTo("#meetupcheckins");
-  		}
-  		
-  		
-// 		if ($(".memberbox .tip").length) {		
-// tooltips
-// $('.tip').tooltip();
-// $(".pix-thumb").tooltip();
-//  		}  		
-  		
-});
-
-
 
 
 </script>
