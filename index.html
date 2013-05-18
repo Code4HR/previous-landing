@@ -303,10 +303,10 @@ $(function() {
     //get the next event
     $.getJSON("http://api.meetup.com/2/events?status=upcoming&order=time&limited_events=False&group_urlname=Code-for-Hampton-Roads&desc=false&offset=0&format=json&page=20&fields=&sig_id=7997287&sig=1e967902e7837fbd5625d4397b299dc608a6943d&callback=?",function(upcomingData) { 
 
-      eventId = upcomingData.results[0].id;
+      //eventId = upcomingData.results[0].id;
 
       //testing value for eventId
-      //eventId = "113850802";
+      eventId = "113850802";
 
       //get the checkin data for the next event
       $.getJSON("https://api.meetup.com/2/checkins?key=02f79626a462ad15683f216361606&sign=true&event_id="+eventId+"&page=20&callback=?",function(checkinData) {
@@ -323,6 +323,7 @@ $(function() {
       
             var memberbox = "<div class='memberbox'></div>";
             $(".carousel-caption").append(memberbox);
+            $(".memberbox").hide();
 
             $.each(checkinData.results, function(i,checkinData) {
 
@@ -335,17 +336,15 @@ $(function() {
                       memberPix  = memberData.photo.thumb_link,
                       memberThumb = toolTips +"<img class='pix-thumb' src='"+memberPix+"' alt='"+ memberData.name +"'/></a>";
 
-                  $(memberThumb).hide().appendTo($(".memberbox")).fadeIn();
+                  $(memberThumb).appendTo($(".memberbox"));
                   $('.tip').tooltip();
 
               });
 
             });
 
-            $(window).load(function () {
-
-              //event information  
-              $.getJSON("https://api.meetup.com/2/events?key=02f79626a462ad15683f216361606&sign=true&event_id="+eventId+"&page=20&callback=?", function(eventData) { 
+            //event information  
+            $.getJSON("https://api.meetup.com/2/events?key=02f79626a462ad15683f216361606&sign=true&event_id="+eventId+"&page=20&callback=?", function(eventData) { 
 
                 var eventName = eventData.results[0].name,
                   eventLocation = eventData.results[0].venue.name,
@@ -355,12 +354,15 @@ $(function() {
                   eventURL = eventData.results[0].event_url,
                   eventCheckin = "<p id='checkins'>"+howMany+" Civic Hackers are checked in at <a href='http://maps.google.com/maps?q="+eventStAddress+" "+eventCity+" "+eventState+"'>"+eventLocation+"</a> for <a href='"+eventURL+"'>"+eventName+"</a>.</p>";
 
-                $(eventCheckin).hide().appendTo($(".memberbox")).fadeIn();
+              $(window).load(function(){
 
-              });            
+                $(eventCheckin).appendTo($(".memberbox"));
+                $(".memberbox").slideDown();
+                
+              });
+
+            });            
             
-            });
-
           }
 
         });
