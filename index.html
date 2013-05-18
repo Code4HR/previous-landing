@@ -303,10 +303,10 @@ $(function() {
     //get the next event
     $.getJSON("http://api.meetup.com/2/events?status=upcoming&order=time&limited_events=False&group_urlname=Code-for-Hampton-Roads&desc=false&offset=0&format=json&page=20&fields=&sig_id=7997287&sig=1e967902e7837fbd5625d4397b299dc608a6943d&callback=?",function(upcomingData) { 
 
-      //eventId = upcomingData.results[0].id;
+      eventId = upcomingData.results[0].id;
 
       //testing value for eventId
-      eventId = "113850802";
+      //eventId = "113850802";
 
       //get the checkin data for the next event
       $.getJSON("https://api.meetup.com/2/checkins?key=02f79626a462ad15683f216361606&sign=true&event_id="+eventId+"&page=20&callback=?",function(checkinData) {
@@ -358,7 +358,7 @@ $(function() {
 
                 $(eventCheckin).appendTo($(".memberbox"));
                 $(".memberbox").slideDown();
-                
+
               });
 
             });            
