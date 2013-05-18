@@ -316,7 +316,7 @@ $(function() {
           //if there's nobody checked in, there's nothing to see here.  
           if (howMany === 0) {
 
-            console.log("nobody signed up.");
+            console.log("Nobody is checked in yet.");
 
           //else, let's get those thumbnails up and running.  
           } else if (howMany >= 1) {
@@ -326,7 +326,7 @@ $(function() {
 
             $.each(checkinData.results, function(i,checkinData) {
 
-              console.log(checkinData.member_id);
+              //console.log(checkinData.member_id);
 
               $.getJSON("https://api.meetup.com/2/member/"+checkinData.member_id+"?key=02f79626a462ad15683f216361606&&sign=true&page=20&callback=?", function(memberData) { 
                   
@@ -335,35 +335,35 @@ $(function() {
                       memberPix  = memberData.photo.thumb_link,
                       memberThumb = toolTips +"<img class='pix-thumb' src='"+memberPix+"' alt='"+ memberData.name +"'/></a>";
 
-                  $(".memberbox").append(memberThumb);
+                  $(memberThumb).hide().appendTo($(".memberbox")).fadeIn();
                   $('.tip').tooltip();
 
               });
 
             });
 
-            //event information  
-            $.getJSON("https://api.meetup.com/2/events?key=02f79626a462ad15683f216361606&sign=true&event_id="+eventId+"&page=20&callback=?", function(eventData) { 
+            $(window).load(function () {
+
+              //event information  
+              $.getJSON("https://api.meetup.com/2/events?key=02f79626a462ad15683f216361606&sign=true&event_id="+eventId+"&page=20&callback=?", function(eventData) { 
 
                 var eventName = eventData.results[0].name,
-                    eventLocation = eventData.results[0].venue.name,
-                    eventStAddress = eventData.results[0].venue.address_1,
-                    eventCity = eventData.results[0].venue.city,
-                    eventState = eventData.results[0].venue.state,
-                    eventURL = eventData.results[0].event_url,
-                    eventCheckin = "<p id='checkins'>"+howMany+" Civic Hackers are checked in at <a href='http://maps.google.com/maps?q="+eventStAddress+" "+eventCity+" "+eventState+"'>"+eventLocation+"</a> for <a href='"+eventURL+"'>"+eventName+"</a>.</p>";
+                  eventLocation = eventData.results[0].venue.name,
+                  eventStAddress = eventData.results[0].venue.address_1,
+                  eventCity = eventData.results[0].venue.city,
+                  eventState = eventData.results[0].venue.state,
+                  eventURL = eventData.results[0].event_url,
+                  eventCheckin = "<p id='checkins'>"+howMany+" Civic Hackers are checked in at <a href='http://maps.google.com/maps?q="+eventStAddress+" "+eventCity+" "+eventState+"'>"+eventLocation+"</a> for <a href='"+eventURL+"'>"+eventName+"</a>.</p>";
 
-                $(".memberbox").append(eventCheckin);
+                $(eventCheckin).hide().appendTo($(".memberbox")).fadeIn();
 
+              });            
+            
             });
 
-            
           }
 
-
-
-      });
-
+        });
 
       });
 
