@@ -311,68 +311,74 @@ $(function() {
       console.log(eventEndTime);
       eventId = upcomingData.results[0].id;
 
+      if (currentTime > eventTime && currentTime < eventEndTime) {
 
-      //testing value for eventId
-      //eventId = "113850802";
 
-      //get the checkin data for the next event
-      $.getJSON("https://api.meetup.com/2/checkins?key=02f79626a462ad15683f216361606&sign=true&event_id="+eventId+"&page=20&callback=?",function(checkinData) {
+        //testing value for eventId
+        //eventId = "113850802";
 
-          howMany = checkinData.meta.count;
+        //get the checkin data for the next event
+        $.getJSON("https://api.meetup.com/2/checkins?key=02f79626a462ad15683f216361606&sign=true&event_id="+eventId+"&page=20&callback=?",function(checkinData) {
 
-          //if there's nobody checked in, there's nothing to see here.  
-          if (howMany === 0) {
+            howMany = checkinData.meta.count;
 
-            console.log("Nobody is checked in yet.");
+            //if there's nobody checked in, there's nothing to see here.  
+            if (howMany === 0) {
 
-          //else, let's get those thumbnails up and running.  
-          } else if (howMany >= 1) {
-      
-            var memberbox = "<div class='memberbox'></div>";
-            $(".carousel-caption").append(memberbox);
-            $(".memberbox").hide();
+              console.log("Nobody is checked in yet.");
 
-            $.each(checkinData.results, function(i,checkinData) {
+            //else, let's get those thumbnails up and running.  
+            } else if (howMany >= 1) {
+        
+              var memberbox = "<div class='memberbox'></div>";
+              $(".carousel-caption").append(memberbox);
+              $(".memberbox").hide();
 
-              //console.log(checkinData.member_id);
+              $.each(checkinData.results, function(i,checkinData) {
 
-              $.getJSON("https://api.meetup.com/2/member/"+checkinData.member_id+"?key=02f79626a462ad15683f216361606&&sign=true&page=20&callback=?", function(memberData) { 
-                  
-                  var memberName = memberData.name,
-                      toolTips = "<a class='tip' href='#' data-toggle='tooltip' data-placement='bottom' data-original-title='"+memberData.name+"'>", 
-                      memberPix  = memberData.photo.thumb_link,
-                      memberThumb = toolTips +"<img class='pix-thumb' src='"+memberPix+"' alt='"+ memberData.name +"'/></a>";
+                //console.log(checkinData.member_id);
 
-                  $(memberThumb).appendTo($(".memberbox"));
-                  $('.tip').tooltip();
+                $.getJSON("https://api.meetup.com/2/member/"+checkinData.member_id+"?key=02f79626a462ad15683f216361606&&sign=true&page=20&callback=?", function(memberData) { 
+                    
+                    var memberName = memberData.name,
+                        toolTips = "<a class='tip' href='#' data-toggle='tooltip' data-placement='bottom' data-original-title='"+memberData.name+"'>", 
+                        memberPix  = memberData.photo.thumb_link,
+                        memberThumb = toolTips +"<img class='pix-thumb' src='"+memberPix+"' alt='"+ memberData.name +"'/></a>";
 
-              });
+                    $(memberThumb).appendTo($(".memberbox"));
+                    $('.tip').tooltip();
 
-            });
-
-            //event information  
-            $.getJSON("https://api.meetup.com/2/events?key=02f79626a462ad15683f216361606&sign=true&event_id="+eventId+"&page=20&callback=?", function(eventData) { 
-
-                var eventName = eventData.results[0].name,
-                  eventLocation = eventData.results[0].venue.name,
-                  eventStAddress = eventData.results[0].venue.address_1,
-                  eventCity = eventData.results[0].venue.city,
-                  eventState = eventData.results[0].venue.state,
-                  eventURL = eventData.results[0].event_url,
-                  eventCheckin = "<p id='checkins'>"+howMany+" Civic Hackers are checked in at <a href='http://maps.google.com/maps?q="+eventStAddress+" "+eventCity+" "+eventState+"'>"+eventLocation+"</a> for <a href='"+eventURL+"'>"+eventName+"</a>.</p>";
-
-              $(window).load(function(){
-
-                $(eventCheckin).appendTo($(".memberbox"));
-                $(".memberbox").slideDown();
+                });
 
               });
 
-            });            
-            
-          }
+              //event information  
+              $.getJSON("https://api.meetup.com/2/events?key=02f79626a462ad15683f216361606&sign=true&event_id="+eventId+"&page=20&callback=?", function(eventData) { 
 
-        });
+                  var eventName = eventData.results[0].name,
+                    eventLocation = eventData.results[0].venue.name,
+                    eventStAddress = eventData.results[0].venue.address_1,
+                    eventCity = eventData.results[0].venue.city,
+                    eventState = eventData.results[0].venue.state,
+                    eventURL = eventData.results[0].event_url,
+                    eventCheckin = "<p id='checkins'>"+howMany+" Civic Hackers are checked in at <a href='http://maps.google.com/maps?q="+eventStAddress+" "+eventCity+" "+eventState+"'>"+eventLocation+"</a> for <a href='"+eventURL+"'>"+eventName+"</a>.</p>";
+
+                $(window).load(function(){
+
+                  $(eventCheckin).appendTo($(".memberbox"));
+                  $(".memberbox").slideDown();
+
+                });
+
+              });            
+              
+            }
+
+          });
+
+      } else {
+        //do nothing
+      }
 
       });
 
