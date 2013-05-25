@@ -31,8 +31,8 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 <style>
-.memberbox{margin-top:15px; margin-bottom:10px}
-.memberbox h2{color:#fff; font-size:150%; margin-bottom:0}
+.memberbox{margin-top:15px; margin-bottom:10px;}
+.memberbox h2{color:#aaa; font-size:150%; margin-bottom:0}
 .carousel-caption .pix-thumb{position:relative; min-width:45px; margin-right:5px; border-radius:6px; width:45px; height:45px}
 .membercheckin{margin-top:20px; color:#fff}
 .carousel-caption{margin-top:100px}
@@ -304,33 +304,40 @@ $(function() {
     $.getJSON("http://api.meetup.com/2/events?status=upcoming&order=time&limited_events=False&group_urlname=Code-for-Hampton-Roads&desc=false&offset=0&format=json&page=20&fields=&sig_id=7997287&sig=1e967902e7837fbd5625d4397b299dc608a6943d&callback=?",function(upcomingData) { 
 
       eventTime = upcomingData.results[0].time;
-      currentTime = new Date().getTime();
+      currentTime = eventTime + 1 //testing value
+      //currentTime = new Date().getTime();
       eventEndTime = eventTime + 60*60*3;
 
       console.log(currentTime)
       console.log(eventEndTime);
-      eventId = upcomingData.results[0].id;
+      //eventId = upcomingData.results[0].id;
 
+      if (currentTime > eventTime && currentTime < eventEndTime) { 
+        console.log("Time to rock!");
 
       //testing value for eventId
-      //eventId = "113850802";
+      eventId = "113850802";
 
       //get the checkin data for the next event
       $.getJSON("https://api.meetup.com/2/checkins?key=02f79626a462ad15683f216361606&sign=true&event_id="+eventId+"&page=20&callback=?",function(checkinData) {
 
           howMany = checkinData.meta.count;
 
+          var memberbox = "<div class='memberbox'></div>";
+          $(".carousel-caption").append(memberbox);
+          $(".memberbox").hide();
+
           //if there's nobody checked in, there's nothing to see here.  
           if (howMany === 0) {
 
             console.log("Nobody is checked in yet.");
 
+            $(".memberbox").html("<h2>Nobody has checked in yet.</h2>");
+            $(".memberbox").slideDown();
+            
+
           //else, let's get those thumbnails up and running.  
           } else if (howMany >= 1) {
-      
-            var memberbox = "<div class='memberbox'></div>";
-            $(".carousel-caption").append(memberbox);
-            $(".memberbox").hide();
 
             $.each(checkinData.results, function(i,checkinData) {
 
@@ -373,6 +380,10 @@ $(function() {
           }
 
         });
+
+      } else {
+        console.log("Go back to bed!");
+      }
 
       });
 
