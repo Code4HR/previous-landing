@@ -312,7 +312,7 @@ $(function() {
       console.log(eventEndTime);
       eventId = upcomingData.results[0].id;
 
-      if (currentTime >= eventTime) { 
+      if (currentTime >= eventTime && currentTime < eventEndTime) { 
         console.log("Time to rock!");
  
         var memberbox = "<div class='memberbox'></div>";
@@ -393,7 +393,7 @@ $(function() {
         console.log("It's fresh!");
       }
 
-      } else if (eventTime > eventEndTime) {
+      } else {
         console.log("Go back to bed!");
       }
 
