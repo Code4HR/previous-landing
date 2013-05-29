@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+f<!DOCTYPE html>
 <html lang="en-US">
   <head>
     <meta charset="utf-8">
@@ -31,7 +31,7 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 <style>
-.memberbox{margin-top:15px; margin-bottom:10px;}
+.memberbox{margin-top:15px; margin-bottom:10px; min-height:50px;}
 .memberbox h2{color:#aaa; font-size:150%; margin-bottom:0}
 .carousel-caption .pix-thumb{position:relative; min-width:45px; margin-right:5px; border-radius:6px; width:45px; height:45px}
 .membercheckin{margin-top:20px; color:#fff}
@@ -393,7 +393,7 @@ $(function() {
         console.log("It's fresh!");
       }
 
-      setInterval(refreshThumbnails, 5000);
+      setInterval(refreshThumbnails, 300000);
 
       } else {
         console.log("Go back to bed!");
