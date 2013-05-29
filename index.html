@@ -304,12 +304,12 @@ $(function() {
     $.getJSON("http://api.meetup.com/2/events?status=upcoming&order=time&limited_events=False&group_urlname=Code-for-Hampton-Roads&desc=false&offset=0&format=json&page=20&fields=&sig_id=7997287&sig=1e967902e7837fbd5625d4397b299dc608a6943d&callback=?",function(upcomingData) { 
 
       eventTime = upcomingData.results[0].time;
-      currentTime = eventTime + 1 //testing value
-      //currentTime = new Date().getTime();
-      eventEndTime = eventTime + 60*60*3;
+      //currentTime = eventTime + 1 //testing value
+      currentTime = new Date().getTime();
+      eventEndTime = eventTime + 60000*60*3;
 
-      console.log(currentTime)
-      console.log(eventEndTime);
+      console.log("Current Time is " + currentTime)
+      console.log("Event End Time is " + eventEndTime);
       eventId = upcomingData.results[0].id;
 
       if (currentTime >= eventTime && currentTime < eventEndTime) { 
