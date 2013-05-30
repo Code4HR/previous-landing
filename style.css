@@ -100,6 +100,10 @@
       -moz-border-radius: 5px;
       border-radius: 5px;
     }
+    .carousel-caption #checkins {
+      color: #CCCCCC;
+      padding: .75em 0 0 0;
+    }
     .carousel-caption h1,
     .carousel-caption .lead {
       margin: 0;
