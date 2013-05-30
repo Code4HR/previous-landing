@@ -313,7 +313,7 @@ $(function() {
       eventId = upcomingData.results[0].id;
 
       if (currentTime >= eventTime && currentTime < eventEndTime) { 
-        console.log("Time to rock!");
+        //console.log("Time to rock!");
  
         var memberbox = "<div class='memberbox'></div>";
         $(".carousel-caption").append(memberbox);
@@ -387,9 +387,9 @@ $(function() {
       showThumbnails();
 
       function refreshThumbnails() {
-        $('.memberbox').empty();
+        $('.memberbox').empty();  
         showThumbnails();
-        console.log("It's fresh!");
+        //console.log("It's fresh!");
       }
 
       } else {
