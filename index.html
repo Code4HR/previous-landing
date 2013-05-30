@@ -294,19 +294,21 @@
     </div><!-- /.container -->
   </body>
 <script src="bootstrap-tooltip.js"></script>
-<script>
-
-$(function() {  	
+<script>  	
 
   $(document).ready(function(){
 
+    //GLOBAL VARIABLES HERE//
+    apiKey = "02f79626a462ad15683f216361606";
+    meetupGroupUrl = "Code-for-Hampton-Roads";
+
     //get the next event
-    $.getJSON("http://api.meetup.com/2/events?status=upcoming&order=time&limited_events=False&group_urlname=Code-for-Hampton-Roads&desc=false&offset=0&format=json&page=20&fields=&sig_id=7997287&sig=1e967902e7837fbd5625d4397b299dc608a6943d&callback=?",function(upcomingData) { 
+    $.getJSON("http://api.meetup.com/2/events?status=upcoming&order=time&limited_events=False&group_urlname=" + meetupGroupUrl+ "&desc=false&offset=0&format=json&page=20&fields=&sig_id=7997287&sig=1e967902e7837fbd5625d4397b299dc608a6943d&callback=?",function(upcomingData) { 
 
       eventTime = upcomingData.results[0].time;
       //currentTime = eventTime - 1 //testing value
       currentTime = new Date().getTime();
-      eventEndTime = eventTime + 60000*60*3;
+      eventEndTime = eventTime + 60000*60*3; //until I discover how to get the event end time from meetup, assuming 3 hours meetups.
 
       //console.log("Current Time is " + currentTime)
       //console.log("Event End Time is " + eventEndTime);
@@ -325,7 +327,7 @@ $(function() {
       function showThumbnails() {
         
         //get the checkin data for the next event
-        $.getJSON("https://api.meetup.com/2/checkins?key=02f79626a462ad15683f216361606&sign=true&event_id="+eventId+"&page=20&callback=?",function(checkinData) {
+        $.getJSON("https://api.meetup.com/2/checkins?key="+apiKey+"&sign=true&event_id="+eventId+"&page=20&callback=?",function(checkinData) {
 
             howMany = checkinData.meta.count;
 
@@ -345,7 +347,7 @@ $(function() {
 
                 //console.log(checkinData.member_id);
 
-                $.getJSON("https://api.meetup.com/2/member/"+checkinData.member_id+"?key=02f79626a462ad15683f216361606&&sign=true&page=20&callback=?", function(memberData) { 
+                $.getJSON("https://api.meetup.com/2/member/"+checkinData.member_id+"?key="+apiKey+"&&sign=true&page=20&callback=?", function(memberData) { 
                     
                     var memberName = memberData.name,
                         toolTips = "<a class='tip' href='#' data-toggle='tooltip' data-placement='bottom' data-original-title='"+memberData.name+"'>", 
@@ -359,7 +361,7 @@ $(function() {
               });
 
               //event information  
-              $.getJSON("https://api.meetup.com/2/events?key=02f79626a462ad15683f216361606&sign=true&event_id="+eventId+"&page=20&callback=?", function(eventData) { 
+              $.getJSON("https://api.meetup.com/2/events?key="+apiKey+"&sign=true&event_id="+eventId+"&page=20&callback=?", function(eventData) { 
 
                   var eventName = eventData.results[0].name,
                     eventLocation = eventData.results[0].venue.name,
@@ -393,14 +395,12 @@ $(function() {
       }
 
       } else {
-        //console.log("Nothing to see here.");
+        console.log("Nothing to see here.");
       }
 
       });
 
     });
-
-  });
 
 </script>
 </html>
