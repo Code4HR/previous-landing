@@ -308,8 +308,8 @@ $(function() {
       currentTime = new Date().getTime();
       eventEndTime = eventTime + 60000*60*3;
 
-      console.log("Current Time is " + currentTime)
-      console.log("Event End Time is " + eventEndTime);
+      //console.log("Current Time is " + currentTime)
+      //console.log("Event End Time is " + eventEndTime);
       eventId = upcomingData.results[0].id;
 
       if (currentTime >= eventTime && currentTime < eventEndTime) { 
@@ -393,7 +393,7 @@ $(function() {
       }
 
       } else {
-        console.log("Nothing to see here.");
+        //console.log("Nothing to see here.");
       }
 
       });
