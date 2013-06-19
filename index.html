@@ -310,7 +310,9 @@
       eventTime = upcomingData.results[0].time;
       //currentTime = eventTime + 1 //testing value
       currentTime = new Date().getTime();
-      eventEndTime = eventTime + 60000*60*3; //until I discover how to get the event end time from meetup, assuming 3 hours meetups.
+      eventEndTime = eventTime + 60000*60*3;
+      //eventEndTime = eventTime + upcomingData.results[0].duration;
+      //the above line only works if a specific end time is set.
 
       //console.log("Current Time is " + currentTime)
       //console.log("Event End Time is " + eventEndTime);
@@ -398,12 +400,6 @@
       }
 
       showThumbnails();
-
-      function refreshThumbnails() {
-        $('.memberbox').empty();  
-        showThumbnails();
-        //console.log("It's fresh!");
-      }
 
       } else {
         console.log("Nothing to see here.");
