@@ -382,7 +382,10 @@
                     eventCity = eventData.results[0].venue.city,
                     eventState = eventData.results[0].venue.state,
                     eventURL = eventData.results[0].event_url,
-                    eventCheckin = "<p id='checkins'>"+howMany+" Civic Hackers are checked in at <a href='http://maps.google.com/maps?q="+eventStAddress+" "+eventCity+" "+eventState+"'>"+eventLocation+"</a> for <a href='"+eventURL+"'>"+eventName+"</a>.</p>";
+                    memberCount = memberList.length,
+                    eventCheckin = "<p id='checkins'>"+memberCount+" Civic Hackers are checked in at <a href='http://maps.google.com/maps?q="+eventStAddress+" "+eventCity+" "+eventState+"'>"+eventLocation+"</a> for <a href='"+eventURL+"'>"+eventName+"</a>.</p>";
+
+                  console.log(memberCount);
 
                 $(window).load(function(){
 
@@ -400,6 +403,8 @@
       }
 
       showThumbnails();
+
+
 
       } else {
         console.log("Nothing to see here.");
