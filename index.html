@@ -299,16 +299,20 @@
   $(document).ready(function(){
 
     //GLOBAL VARIABLES HERE//
-    apiKey = "02f79626a462ad15683f216361606";
-    meetupGroupUrl = "Code-for-Hampton-Roads";
+    var apiKey = "02f79626a462ad15683f216361606",
+        meetupGroupUrl = "Code-for-Hampton-Roads";
+
+    var memberList = new Array();
 
     //get the next event
     $.getJSON("http://api.meetup.com/2/events?status=upcoming&order=time&limited_events=False&group_urlname=" + meetupGroupUrl+ "&desc=false&offset=0&format=json&page=20&fields=&sig_id=7997287&sig=1e967902e7837fbd5625d4397b299dc608a6943d&callback=?",function(upcomingData) { 
 
       eventTime = upcomingData.results[0].time;
-      //currentTime = eventTime - 1 //testing value
+      //currentTime = eventTime + 1 //testing value
       currentTime = new Date().getTime();
-      eventEndTime = eventTime + 60000*60*3; //until I discover how to get the event end time from meetup, assuming 3 hours meetups.
+      eventEndTime = eventTime + 60000*60*3;
+      //eventEndTime = eventTime + upcomingData.results[0].duration;
+      //the above line only works if a specific end time is set.
 
       //console.log("Current Time is " + currentTime)
       //console.log("Event End Time is " + eventEndTime);
@@ -353,7 +357,16 @@
                         toolTips = "<a class='tip' href='#' data-toggle='tooltip' data-placement='bottom' data-original-title='"+memberData.name+"'>", 
                         memberPix  = memberData.photo.thumb_link,
                         memberThumb = toolTips +"<img class='pix-thumb' src='"+memberPix+"' alt='"+ memberData.name +"'/></a>";
-                    $(memberThumb).appendTo($(".memberbox"));
+                    
+                    if (memberList.indexOf(memberName) === -1) {
+                        
+                        memberList.push(memberName);
+                        $(memberThumb).appendTo($(".memberbox"));
+
+                    } else {
+                      //do nothing
+                    } 
+                                      
                     $('.tip').tooltip();
 
                 });
@@ -369,7 +382,10 @@
                     eventCity = eventData.results[0].venue.city,
                     eventState = eventData.results[0].venue.state,
                     eventURL = eventData.results[0].event_url,
-                    eventCheckin = "<p id='checkins'>"+howMany+" Civic Hackers are checked in at <a href='http://maps.google.com/maps?q="+eventStAddress+" "+eventCity+" "+eventState+"'>"+eventLocation+"</a> for <a href='"+eventURL+"'>"+eventName+"</a>.</p>";
+                    memberCount = memberList.length,
+                    eventCheckin = "<p id='checkins'>"+memberCount+" Civic Hackers are checked in at <a href='http://maps.google.com/maps?q="+eventStAddress+" "+eventCity+" "+eventState+"'>"+eventLocation+"</a> for <a href='"+eventURL+"'>"+eventName+"</a>.</p>";
+
+                  console.log(memberCount);
 
                 $(window).load(function(){
 
@@ -388,11 +404,7 @@
 
       showThumbnails();
 
-      function refreshThumbnails() {
-        $('.memberbox').empty();  
-        showThumbnails();
-        //console.log("It's fresh!");
-      }
+
 
       } else {
         console.log("Nothing to see here.");
