@@ -1,6 +1,8 @@
 http://codeforhamptonroads.org
 ===================
 
+###Coming Soon Summer 2013: Turning this into a Template for New Brigade Sites to Fork###
+
 Landing page for *Code for Hampton Roads*
 
 Note that branch `gh-pages` is what shows on production codeforhamptonroads.org. Master does nothing.
