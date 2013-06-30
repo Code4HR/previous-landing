@@ -307,26 +307,23 @@
     //get the next event
     $.getJSON("http://api.meetup.com/2/events?status=upcoming&order=time&limited_events=False&group_urlname=" + meetupGroupUrl+ "&desc=false&offset=0&format=json&page=20&fields=&sig_id=7997287&sig=1e967902e7837fbd5625d4397b299dc608a6943d&callback=?",function(upcomingData) { 
 
-      eventTime = upcomingData.results[0].time;
-      currentTime = eventTime + 1 //testing value
-      //currentTime = new Date().getTime();
-      eventEndTime = eventTime + 60000*60*3;
-      //eventEndTime = eventTime + upcomingData.results[0].duration;
-      //the above line only works if a specific end time is set.
+      eventTime = upcomingData.results[0].time - 900000;  //checkins display 15 minutes ahead of time.
+      currentTime = new Date().getTime();
+      //currentTime = eventTime + 1 //testing value
+      if (upcomingData.results[0].duration) {
+        eventEndTime = eventTime + upcomingData.results[0].duration;  //if a specific end time is set for the given event, it is used.
+      } else {
+        eventEndTime = eventTime + 60000*60*3; //else, the event is assumed to be three hours long.
+      }
 
-      //console.log("Current Time is " + currentTime)
-      //console.log("Event End Time is " + eventEndTime);
-      //eventId = upcomingData.results[0].id;
+      eventId = upcomingData.results[0].id;
+      //eventId = "113850802";
 
       if (currentTime >= eventTime && currentTime < eventEndTime) { 
-        //console.log("Time to rock!");
  
         var memberbox = "<div class='memberbox'></div>";
         $(".carousel-caption").append(memberbox);
         $(".memberbox").hide();
-
-        //testing value for eventId
-        eventId = "113850802";
 
       function showThumbnails() {
         
@@ -335,20 +332,14 @@
 
             howMany = checkinData.meta.count;
 
-            //if there's nobody checked in, there's nothing to see here.  
             if (howMany === 0) {
-
-              console.log("Nobody is checked in yet.");
 
               $(".memberbox").html("<h2>Nobody has checked in yet.</h2>");
               $(".memberbox").slideDown();          
-
-            //else, let's get those thumbnails up and running.  
+ 
             } else if (howMany >= 1) {
 
               $.each(checkinData.results, function(i,checkinData) {
-
-                //console.log(checkinData.member_id);
 
                 $.getJSON("https://api.meetup.com/2/member/"+checkinData.member_id+"?key="+apiKey+"&&sign=true&page=20&callback=?", function(memberData) { 
                     
@@ -384,27 +375,12 @@
                     memberCount = memberList.length,
                     eventCheckin = "<p id='checkins'>"+memberCount+" Civic Hackers are checked in at <a href='http://maps.google.com/maps?q="+eventStAddress+" "+eventCity+" "+eventState+"'>"+eventLocation+"</a> for <a href='"+eventURL+"'>"+eventName+"</a>.</p>";
 
-                  console.log(memberCount);
-
                 $(window).load(function(){
                   
                   $(eventCheckin).appendTo($(".memberbox"));
-                  console.log($('.memberbox').height());
-                  var memberboxHeight = $('.memberbox').height();
-                  console.log($('.carousel-inner').css('height'));
-                  //$('.carousel-inner').css('height', += memberboxHeight );
-                  var responsive_viewport = $(window).width();
-                  /* if is below 768px */
-                  if (responsive_viewport < 768) {
-                    //$('.carousel-inner').css('height', (parseFloat($('.carousel-inner').css('height')) + memberboxHeight) + 'px');
-                  }
-
-                  console.log($('.carousel-inner').css('height'));
                   $(".memberbox").slideDown();
 
                 });
-
-
 
               });            
               
