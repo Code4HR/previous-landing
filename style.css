@@ -63,6 +63,8 @@
     /* Carousel base class */
     .carousel {
       margin-bottom: 60px;
+      background-image: url(./images/sunrise-top.jpg);
+      background-size: cover;
     }
 
     .carousel .container {
@@ -80,7 +82,7 @@
     }
 
     .carousel .item {
-      height: 500px;
+      min-height: 500px;
 
     }
     .carousel img {
@@ -181,11 +183,14 @@
       }
 
       .carousel .item {
-        height: 500px;
+
       }
       .carousel img {
         width: auto;
-        height: 500px;
+      }
+
+      .carousel-caption {
+
       }
 
       .featurette {
@@ -219,11 +224,17 @@
       .carousel .container {
 
       }
-      .carousel .item {
-        height: 300px;
+      
+      .carousel-caption {
+        margin-bottom: 20px;
       }
-      .carousel img {
-        height: 300px;
+
+      .carousel .item {
+        min-height: 300px;
+      }
+      .carousel img#carousel-image {
+        min-height: 300px;
+
       }
       .carousel-caption {
         width: 96%;
