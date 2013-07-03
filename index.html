@@ -352,6 +352,7 @@
                         
                         memberList.push(memberName);
                         $(memberThumb).appendTo($(".memberbox"));
+                        console.log(memberList);
 
                     } else {
                       //do nothing
@@ -371,12 +372,11 @@
                     eventStAddress = eventData.results[0].venue.address_1,
                     eventCity = eventData.results[0].venue.city,
                     eventState = eventData.results[0].venue.state,
-                    eventURL = eventData.results[0].event_url,
-                    memberCount = memberList.length,
-                    eventCheckin = "<p id='checkins'>"+memberCount+" Civic Hackers are checked in at <a href='http://maps.google.com/maps?q="+eventStAddress+" "+eventCity+" "+eventState+"'>"+eventLocation+"</a> for <a href='"+eventURL+"'>"+eventName+"</a>.</p>";
-
+                    eventURL = eventData.results[0].event_url;
+                    
                 $(window).load(function(){
-                  
+                  var memberCount = memberList.length,
+                      eventCheckin = "<p id='checkins'>"+memberCount+" Civic Hackers are checked in at <a href='http://maps.google.com/maps?q="+eventStAddress+" "+eventCity+" "+eventState+"'>"+eventLocation+"</a> for <a href='"+eventURL+"'>"+eventName+"</a>.</p>";
                   $(eventCheckin).appendTo($(".memberbox"));
                   $(".memberbox").slideDown();
 
@@ -391,6 +391,9 @@
       }
 
       showThumbnails();
+
+      console.log(memberList);
+      console.log(memberList.length);
 
       } else {
         console.log("Nothing to see here.");
