@@ -327,15 +327,16 @@
 	    })
 
     //GLOBAL VARIABLES HERE//
-    var apiKey = "02f79626a462ad15683f216361606",
-        meetupGroupUrl = "Code-for-Hampton-Roads";
+ var apiKey = "2975b6e4c43147824522959761677",
+        meetupGroupUrl = "Code-for-Miami";
 
     var memberList = new Array();
-
+   
     //get the next event
-    $.getJSON("http://api.meetup.com/2/events?status=upcoming&order=time&limited_events=False&group_urlname=" + meetupGroupUrl+ "&desc=false&offset=0&format=json&page=20&fields=&sig_id=7997287&sig=1e967902e7837fbd5625d4397b299dc608a6943d&callback=?",function(upcomingData) { 
+    $.getJSON("http://api.meetup.com/2/events?status=upcoming&order=time&limited_events=False&group_urlname=Code-For-Miami&desc=false&offset=0&format=json&page=20&fields=&sig_id=14485765&sig=ee64791e1ab7c9e6f82c5f5e47c85118fa698fd6&callback=?",function(upcomingData) { 
 
       eventTime = upcomingData.results[0].time;
+      
       //currentTime = eventTime + 1 //testing value
       currentTime = new Date().getTime();
       eventEndTime = eventTime + 60000*60*3;
@@ -348,10 +349,10 @@
 
       if (currentTime >= eventTime && currentTime < eventEndTime) { 
         //console.log("Time to rock!");
- 
+        
         var memberbox = "<div class='memberbox'></div>";
         $(".carousel-caption").append(memberbox);
-        $(".memberbox").hide();
+        //$(".memberbox").hide();
 
         //testing value for eventId
         //eventId = "113850802";
