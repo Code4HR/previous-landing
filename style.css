@@ -166,6 +166,9 @@
       letter-spacing: -1px;
     }
 
+    .hide {
+      display:none;
+    }
 
 
     /* RESPONSIVE CSS
