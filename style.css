@@ -166,8 +166,21 @@
       letter-spacing: -1px;
     }
 
+    #roster {
+      background: white;
+      padding: 1em; 
+    }
 
+    #roster ul {
+      list-style-type: none !important;
 
+      
+    }
+
+    #roster ul li {
+
+    }
+    
     /* RESPONSIVE CSS
     -------------------------------------------------- */
 
@@ -264,3 +277,4 @@
       }
 
     }
+

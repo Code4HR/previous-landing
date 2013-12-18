@@ -318,11 +318,16 @@ var civicHackers = [
 
 //Add your name to the list above!
 
-var foo = civicHackers.length;
+var foo = civicHackers.length,
+    civicHackerList = "";
 
 for (i = 0; i < foo; i++ ) {
   var civicHackerListItem = "<li>" + civicHackers[i] + "</li>";
-  $('#roster').find('ul').after(civicHackerListItem);
+  civicHackerList += civicHackerListItem;
 }
+
+var completedHackerList = '<ul>' + civicHackerList + '</ul>';
+
+$('#roster').html(completedHackerList);
 
 </script>
