@@ -95,15 +95,16 @@
     }
 
     .carousel-caption {
+      background-color: rgba(0,0,0,0);
       position: relative;
       left: 200px;
       top: 250px;
       max-width: 650px;
       padding: 10px 0px 20px 20px;
+      margin-top: 200px;
       -moz-border-radius: 5px;
       border-radius: 5px;
       text-align: center;
-      background-color: #ffffff;
     }
 
     .carousel-caption h1,
