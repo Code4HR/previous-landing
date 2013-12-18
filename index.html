@@ -152,12 +152,17 @@
               </p>
               <a class="btn btn-large btn-primary" href="http://www.meetup.com/Code-for-Hampton-Roads/">Stop By Our Meetups</a>
             </div>
+
+            <div id="roster">
+              <ul>
+                
+              </ul>
+            </div>
+
           </div>
         </div>
       </div>
     </div><!-- /.carousel -->
-
-    
     
     <div class="container marketing clearleft">
 
@@ -165,7 +170,7 @@
     <!-- Marketing messaging and featurettes
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
-
+    
 
 
       <!-- Three columns of text below the carousel -->
@@ -297,3 +302,27 @@
   </body>
 
 </html>
+
+<script>
+
+var civicHackers = [ 
+  "Kevin Curry",
+  "Bret Fisher",
+  "Beth Fisher",
+  "Stanley Zheng",
+  "Brendan Barsness",
+  "J. Albert Bowden",
+  "Ben Schoenfeld",
+  "Blaine Price",
+];
+
+//Add your name to the list above!
+
+var foo = civicHackers.length;
+
+for (i = 0; i < foo; i++ ) {
+  var civicHackerListItem = "<li>" + civicHackers[i] + "</li>";
+  $('#roster').find('ul').after(civicHackerListItem);
+}
+
+</script>
