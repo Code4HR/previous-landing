@@ -165,9 +165,38 @@
       line-height: 1;
       letter-spacing: -1px;
     }
+  
+    #roster {
+    }
 
+    #roster p {
+      text-align: right;
+      padding-right: 2em;
+    }
 
+    #inner-roster {
+      z-index: -1;
+      opacity: .85;
+      filter: alpha(opacity=85);
+      padding: 1em; 
+      border: 8px solid #A7A9AC;
+      border-radius: 16px;
+    }
 
+    #inner-roster ul {
+      list-style-type: none !important;
+      margin: 0;
+
+      
+    }
+
+    #inner-roster ul li {
+      display: inline-block;
+      margin: 12px;
+      font-size: 24px;
+      color: black;
+    }
+    
     /* RESPONSIVE CSS
     -------------------------------------------------- */
 
@@ -264,3 +293,4 @@
       }
 
     }
+
