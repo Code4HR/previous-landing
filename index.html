@@ -153,12 +153,6 @@
               <a class="btn btn-large btn-primary" href="http://www.meetup.com/Code-for-Hampton-Roads/">Stop By Our Meetups</a>
             </div>
 
-            <div id="roster">
-              <ul>
-                
-              </ul>
-            </div>
-
           </div>
         </div>
       </div>
@@ -171,7 +165,28 @@
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
     
+      <div class="row">
+        <div id="roster" class="span12">
+          <h2>The Brigade is...</h2>
+          <div id="inner-roster">
+            <ul>
+              <li>Kevin Curry</li>
+              <li>Bret Fisher</li>
+              <li>Beth Fisher</li>
+              <li>Stanley Zheng</li>
+              <li>Brendan Barsness</li>
+              <li>J. Albert Bowden</li>
+              <li>Ben Schoenfeld</li>
+              <li>Blaine Price</li>
+              <!--add your name here-->
+              <li>Your Name Here</li>
+            </ul>
+          </div>
+          <p>Open a <a href="https://github.com/c4hrva/c4hrva-landing">pull request</a> and add your name here.</p>
+        </div>
+      </div>
 
+      <hr class="featurette-divider">
 
       <!-- Three columns of text below the carousel -->
       <div class="row">
@@ -284,7 +299,7 @@
         <img name="contact" id="contact" class="featurette-image pull-right" src="">
         <h2 class="featurette-heading">Want Even More Info? <span class="muted">Contact Us.</span></h2>
         <p class="lead">Our Brigade Captains are Kevin Curry (<a href="mailto:kevin@codeforamerica.org">kevin@codeforamerica.org</a> or <a href="https://twitter.com/kmcurry">@kmcurry</a>) and Bret Fisher (<a href="mailto:bret@codeforamerica.org">bret@codeforamerica.org</a> or <a href="https://twitter.com/BretFisher">@BretFisher</a>) and we want to hear from you!</p>
-      </div>
+      </div>  
 
       <hr class="featurette-divider">
 
@@ -302,32 +317,3 @@
   </body>
 
 </html>
-
-<script>
-
-var civicHackers = [ 
-  "Kevin Curry",
-  "Bret Fisher",
-  "Beth Fisher",
-  "Stanley Zheng",
-  "Brendan Barsness",
-  "J. Albert Bowden",
-  "Ben Schoenfeld",
-  "Blaine Price",
-];
-
-//Add your name to the list above!
-
-var foo = civicHackers.length,
-    civicHackerList = "";
-
-for (i = 0; i < foo; i++ ) {
-  var civicHackerListItem = "<li>" + civicHackers[i] + "</li>";
-  civicHackerList += civicHackerListItem;
-}
-
-var completedHackerList = '<ul>' + civicHackerList + '</ul>';
-
-$('#roster').html(completedHackerList);
-
-</script>
