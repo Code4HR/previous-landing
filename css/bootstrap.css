@@ -1232,7 +1232,7 @@ pre code {
 
 @media (min-width: 1200px) {
   .container {
-    max-width: 1170px;
+    max-width: 960px;
   }
   .col-lg-1,
   .col-lg-2,
@@ -4017,6 +4017,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   min-height: 50px;
   margin-bottom: 20px;
   border: 1px solid transparent;
+
 }
 
 .navbar:before,
@@ -4262,11 +4263,12 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 @media (min-width: 768px) {
   .navbar-nav {
-    float: left;
     margin: 0;
+    width: 100%;
+    text-align: center;
   }
   .navbar-nav > li {
-    float: left;
+    display: inline-block;
   }
   .navbar-nav > li > a {
     padding-top: 15px;
@@ -4923,12 +4925,17 @@ a.list-group-item.active > .badge,
   font-weight: 200;
   line-height: 2.1428571435;
   color: inherit;
-  background-color: #eeeeee;
+  background-color: #cf1b41;
 }
 
 .jumbotron h1 {
   line-height: 1;
-  color: inherit;
+  color: white;
+  text-align: center;
+}
+
+.jumbotron h2 {
+  text-align: center;
 }
 
 .jumbotron p {
