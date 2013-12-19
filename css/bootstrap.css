@@ -6824,30 +6824,68 @@ td.visible-print {
 .ideal h2 {
   position: absolute;
   top: 25%;
-  right: 0;
+  left: 50%;
+  margin-left: -110px;
   text-align: center;
   text-transform: uppercase;
   background: white;
-  padding: .25em 1em;
+  padding: .25em .5em
+  ;
 }
 
 #inspiration {
   position: relative;
 }
 
-#inspiration:after {
-  content: "/";
-  position: absolute;
-  z-index: 10;
-  right: -10%;
-  top: -66%;
-  font-size: 350px;
-  margin: 0;
-  padding: 0;
-
+#inspiration .ideal {
+  background: url(../img/red-overlay.png), 
+              url(http://placehold.it/450x200);
 }
 
-#participation h2 {
-  right: inherit;
-  left: 0;
+#inspiration .ideal h2 {
+  border: 2px solid #cf1b41;
+}
+
+#inspiration:after {
+  content: url(../img/slash.png);
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  right: -125px;
+  top: -25px;
+  z-index: 10;
+}
+
+#participation .ideal {
+    background: url(../img/blue-overlay.png), 
+              url(http://placehold.it/450x200);
+}
+
+#participation .ideal h2 {
+  border: 2px solid #399fd3;
+  margin-left: -130px;
+}
+
+#venue-1 h1, #venue-1 h3 { 
+  text-align: left;
+}
+
+#venue-1 h1 {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#register {
+  border: 1px solid #6D6E71;
+  padding: 1em;
+  text-align: center;
+}
+
+#venue-2 h1, #venue-2 h3{  
+  text-align: right;
+}
+
+#venue-2 h1 {
+  font-weight: bold;
+  text-transform: uppercase;
 }
