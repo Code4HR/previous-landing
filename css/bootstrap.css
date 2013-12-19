@@ -4925,7 +4925,9 @@ a.list-group-item.active > .badge,
   font-weight: 200;
   line-height: 2.1428571435;
   color: inherit;
-  background-color: #cf1b41;
+  background: url(../img/globe.png) center center no-repeat, 
+              #cf1b41;
+  background-size: contain;
 }
 
 .jumbotron h1 {
@@ -4936,6 +4938,7 @@ a.list-group-item.active > .badge,
 
 .jumbotron h2 {
   text-align: center;
+  color: white;
 }
 
 .jumbotron p {
@@ -6809,4 +6812,42 @@ td.visible-print {
   td.hidden-print {
     display: none !important;
   }
+}
+
+.ideal {
+  background: url(http://placehold.it/450x200);
+  background-size: 100%;
+  height: 200px;
+  position: relative;
+}
+
+.ideal h2 {
+  position: absolute;
+  top: 25%;
+  right: 0;
+  text-align: center;
+  text-transform: uppercase;
+  background: white;
+  padding: .25em 1em;
+}
+
+#inspiration {
+  position: relative;
+}
+
+#inspiration:after {
+  content: "/";
+  position: absolute;
+  z-index: 10;
+  right: -10%;
+  top: -66%;
+  font-size: 350px;
+  margin: 0;
+  padding: 0;
+
+}
+
+#participation h2 {
+  right: inherit;
+  left: 0;
 }
