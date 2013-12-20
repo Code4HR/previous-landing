@@ -1232,7 +1232,7 @@ pre code {
 
 @media (min-width: 1200px) {
   .container {
-    max-width: 1170px;
+    max-width: 960px;
   }
   .col-lg-1,
   .col-lg-2,
@@ -4017,6 +4017,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   min-height: 50px;
   margin-bottom: 20px;
   border: 1px solid transparent;
+
 }
 
 .navbar:before,
@@ -4262,11 +4263,12 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 @media (min-width: 768px) {
   .navbar-nav {
-    float: left;
     margin: 0;
+    width: 100%;
+    text-align: center;
   }
   .navbar-nav > li {
-    float: left;
+    display: inline-block;
   }
   .navbar-nav > li > a {
     padding-top: 15px;
@@ -4923,12 +4925,20 @@ a.list-group-item.active > .badge,
   font-weight: 200;
   line-height: 2.1428571435;
   color: inherit;
-  background-color: #eeeeee;
+  background: url(../img/globe.png) center center no-repeat, 
+              #cf1b41;
+  background-size: contain;
 }
 
 .jumbotron h1 {
   line-height: 1;
-  color: inherit;
+  color: white;
+  text-align: center;
+}
+
+.jumbotron h2 {
+  text-align: center;
+  color: white;
 }
 
 .jumbotron p {
@@ -6802,4 +6812,80 @@ td.visible-print {
   td.hidden-print {
     display: none !important;
   }
+}
+
+.ideal {
+  background: url(http://placehold.it/450x200);
+  background-size: 100%;
+  height: 200px;
+  position: relative;
+}
+
+.ideal h2 {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  margin-left: -110px;
+  text-align: center;
+  text-transform: uppercase;
+  background: white;
+  padding: .25em .5em
+  ;
+}
+
+#inspiration {
+  position: relative;
+}
+
+#inspiration .ideal {
+  background: url(../img/red-overlay.png), 
+              url(http://placehold.it/450x200);
+}
+
+#inspiration .ideal h2 {
+  border: 2px solid #cf1b41;
+}
+
+#inspiration:after {
+  content: url(../img/slash.png);
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  right: -125px;
+  top: -25px;
+  z-index: 10;
+}
+
+#participation .ideal {
+    background: url(../img/blue-overlay.png), 
+              url(http://placehold.it/450x200);
+}
+
+#participation .ideal h2 {
+  border: 2px solid #399fd3;
+  margin-left: -130px;
+}
+
+#venue-1 h1, #venue-1 h3 { 
+  text-align: left;
+}
+
+#venue-1 h1 {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#register {
+  border: 1px solid #6D6E71;
+  padding: 1em;
+  text-align: center;
+}
+
+#venue-2 h1, #venue-2 h3{  
+  text-align: right;
+}
+
+#venue-2 h1 {
+  font-weight: bold;
+  text-transform: uppercase;
 }
