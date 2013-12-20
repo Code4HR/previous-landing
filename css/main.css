@@ -4,8 +4,99 @@
    Author's custom styles
    ========================================================================== */
 
+h1, h2, h3 {
+	text-align: center;
+}
 
+.jumbotron h1 {
+	font-weight: 900;
+}
 
+.jumbotron h2 {
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
+.ideal {
+  background: url(http://placehold.it/450x200);
+  background-size: 100%;
+  height: 200px;
+  position: relative;
+}
+
+.ideal h1 {
+  font-family: Georgia, serif;
+  font-weight: normal;
+  font-style: italic;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  margin-left: -110px;
+  text-align: center;
+  text-transform: uppercase;
+  background: white;
+  padding: .25em .5em
+  ;
+}
+
+#inspiration {
+  position: relative;
+}
+
+#inspiration .ideal {
+  background: url(../img/red-overlay.png), 
+              url(http://placehold.it/450x200);
+}
+
+#inspiration .ideal h2 {
+  border: 2px solid #cf1b41;
+}
+
+#participation .ideal {
+    background: url(../img/blue-overlay.png), 
+              url(http://placehold.it/450x200);
+}
+
+#participation .ideal h2 {
+  border: 2px solid #399fd3;
+  margin-left: -130px;
+}
+
+#venue-1 {
+	text-align: left;
+}
+
+#venue-1 h2, #venue-1 h3 {
+	text-align: left;
+	display: inline-block;
+}
+
+#venue-1 h2, #venue-2 h2 {
+	font-size: 48px;
+	text-transform: ;
+}
+
+#venue-2 {
+	text-align: right;
+}
+
+#venue-2 h2, #venue-2 h3 {
+	text-align: right;
+	display: inline-block;
+}
+
+#register {
+  padding: 1em;
+  text-align: center;
+}
+
+#challenges {
+
+}
+
+#challenges h1 {
+	text-align: center;
+}
 
 
 
