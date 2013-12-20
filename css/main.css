@@ -31,7 +31,7 @@ h1, h2, h3 {
   position: absolute;
   top: 25%;
   left: 50%;
-  margin-left: -110px;
+  margin-left: -136px;
   text-align: center;
   text-transform: uppercase;
   background: white;
@@ -48,7 +48,7 @@ h1, h2, h3 {
               url(http://placehold.it/450x200);
 }
 
-#inspiration .ideal h2 {
+#inspiration .ideal h1 {
   border: 2px solid #cf1b41;
 }
 
@@ -57,9 +57,9 @@ h1, h2, h3 {
               url(http://placehold.it/450x200);
 }
 
-#participation .ideal h2 {
+#participation .ideal h1 {
   border: 2px solid #399fd3;
-  margin-left: -130px;
+  margin-left: -158px;
 }
 
 #venue-1 {
