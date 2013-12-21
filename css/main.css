@@ -9,13 +9,12 @@ h1, h2, h3 {
 }
 
 .jumbotron h1 {
-	font-weight: 900;
 	text-transform: uppercase;
 }
 
 .jumbotron h2 {
-	font-weight: 300;
 	text-transform: uppercase;
+	font-family: Helvetica Neue, Helvetica, Arial, sans;
 }
 
 .ideal {
@@ -28,7 +27,6 @@ h1, h2, h3 {
 .ideal h1 {
   font-family: Georgia, serif;
   font-weight: normal;
-  font-style: italic;
   position: absolute;
   top: 25%;
   left: 50%;
@@ -45,7 +43,7 @@ h1, h2, h3 {
 }
 
 #inspiration .ideal {
-  background: url(../img/red-overlay.png), 
+  background: url(../img/red-overlay-light.png), 
               url(../img/roper.jpg);
 }
 
@@ -54,7 +52,7 @@ h1, h2, h3 {
 }
 
 #participation .ideal {
-    background: url(../img/blue-overlay.png), 
+    background: url(../img/blue-overlay-light.png), 
               url(../img/hatch.jpg);
 }
 
@@ -65,6 +63,23 @@ h1, h2, h3 {
 
 #venue-1 {
 	text-align: left;
+}
+
+.venue h2 {
+	font-weight: 400;
+}
+
+.time {
+	color: #666;
+	vertical-align: bottom;
+}
+
+#venue-1 .time {
+	float: right;
+}
+
+#venue-2 .time {
+	float: left;
 }
 
 #venue-1 h2, #venue-1 h3 {

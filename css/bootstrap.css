@@ -463,7 +463,6 @@ h6,
 .h5,
 .h6 {
   font-family: "Oswald","Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 600;
   line-height: 1.1;
 }
 
@@ -489,7 +488,6 @@ h2,
 h3 {
   margin-top: 20px;
   margin-bottom: 10px;
-  font-weight: bold;
 }
 
 h4,
@@ -4926,9 +4924,10 @@ a.list-group-item.active > .badge,
   font-weight: 200;
   line-height: 2.1428571435;
   color: inherit;
-  background: url(../img/globe.png) center center no-repeat, 
+  background: url(../img/red-overlay.png),
+              url(../img/globe.png) center center no-repeat, 
               #cf1b41;
-  background-size: contain;
+  box-shadow: inset 0 0 1em #cf1b41;
 }
 
 .jumbotron h1 {
