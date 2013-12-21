@@ -10,6 +10,7 @@ h1, h2, h3 {
 
 .jumbotron h1 {
 	font-weight: 900;
+	text-transform: uppercase;
 }
 
 .jumbotron h2 {
@@ -45,7 +46,7 @@ h1, h2, h3 {
 
 #inspiration .ideal {
   background: url(../img/red-overlay.png), 
-              url(http://placehold.it/450x200);
+              url(../img/roper.jpg);
 }
 
 #inspiration .ideal h1 {
@@ -54,7 +55,7 @@ h1, h2, h3 {
 
 #participation .ideal {
     background: url(../img/blue-overlay.png), 
-              url(http://placehold.it/450x200);
+              url(../img/hatch.jpg);
 }
 
 #participation .ideal h1 {
