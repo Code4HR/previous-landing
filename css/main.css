@@ -41,43 +41,32 @@
 		font-size: 16px;
 	}
 
-	.venue-img {
-	  background: url(http://placehold.it/450x200);
+	.event h1 {
 	  background-size: contain;
-	  height: 150px;
+	  line-height: 150px;
 	  position: relative;
+	  text-transform: uppercase;
+	  color: white;
 	}
 
-	#inspiration .venue-img {
+	#inspiration h1 {
 	  background: url(../img/red-overlay-light.png), 
 	              url(../img/roper.jpg) center center;
 	}
 
-	#participation .venue-img {
+	#participation h1 {
 	    background: url(../img/blue-overlay-light.png), 
 	           	   	url(../img/hatch.jpg) center center;
 	}
-	
-	h2.ideal {
-		border: 2px solid red;
-		font-family: Georgia, serif;
-		text-transform: uppercase;
-		padding: .25em 1em;
+
+	.event h2 {
 	}
 
-	h2.location {
-		font-size: 1.75em;
-		line-height: .75em;
-	}
-
-	h3.time {
-		font-size: 1.5em;
-		line-height: .75em;
+	.event h3 {
+		margin-top: 0;
 		color: #666;
-	}
-
-	.venue p {
-		margin: 16px 0;
+		font-size: 1.25em;
+		margin-bottom: 1em;
 	}
 
 
