@@ -24,6 +24,20 @@
 		text-align: center;
 	}
 
+	h1 {
+		text-transform: uppercase;
+		color: white;
+		line-height: 1.25em;
+	}
+
+	#events, #challenges, #donors, #faq, #contact {
+		padding: 2em 0;
+	}
+
+	/***************
+	Header
+	***************/
+
 	.jumbotron {
 		padding: 30px 10px;
 	}
@@ -41,11 +55,17 @@
 		font-size: 16px;
 	}
 
+	/******************
+	Events
+	******************/
+
+	#events {
+		padding-top: 0;
+	}
+
 	.event h1 {
 	  background-size: contain;
 	  line-height: 150px;
-	  position: relative;
-	  text-transform: uppercase;
 	  color: white;
 	}
 
@@ -68,10 +88,35 @@
 		font-size: 1.25em;
 		margin-bottom: 1em;
 	}
+	
+	/********************
+	Challenges
+	********************/
 
+	#challenges {
+		background: #81cbf1;
+	}
 
+	/********************
+	Donors
+	********************/
 
+	#donors {
 
+	}
+
+	#donors h1 {
+		color: inherit;
+	}
+	
+	/*******************
+	FAQ
+	*******************/
+
+	#faq {
+		background: #cf1b41;
+		color: white;
+	}
 }
 
 @media screen and (min-width: 768px) {
@@ -79,104 +124,9 @@
 
 
 
-	.ideal {
-	  background: url(http://placehold.it/450x200);
-	  background-size: 100%;
-	  height: 200px;
-	  position: relative;
-	}
 
-	.ideal h1 {
-	  font-family: Georgia, serif;
-	  font-weight: normal;
-	  position: absolute;
-	  top: 25%;
-	  left: 50%;
-	  margin-left: -136px;
-	  text-align: center;
-	  text-transform: uppercase;
-	  background: white;
-	  padding: .25em .5em
-	  ;
-	}
 
-	#inspiration {
-	  position: relative;
-	}
-
-	#inspiration .ideal {
-	  background: url(../img/red-overlay-light.png), 
-	              url(../img/roper.jpg);
-	}
-
-	#inspiration .ideal h1 {
-	  border: 2px solid #cf1b41;
-	}
-
-	#participation .ideal {
-	    background: url(../img/blue-overlay-light.png), 
-	              url(../img/hatch.jpg);
-	}
-
-	#participation .ideal h1 {
-	  border: 2px solid #399fd3;
-	  margin-left: -158px;
-	}
-
-	#venue-1 {
-		text-align: left;
-	}
-
-	.venue h2 {
-		font-weight: 400;
-	}
-
-	.time {
-		color: #666;
-		vertical-align: bottom;
-	}
-
-	#venue-1 .time {
-		float: right;
-	}
-
-	#venue-2 .time {
-		float: left;
-	}
-
-	#venue-1 h2, #venue-1 h3 {
-		text-align: left;
-		display: inline-block;
-	}
-
-	#venue-1 h2, #venue-2 h2 {
-		font-size: 48px;
-		text-transform: ;
-	}
-
-	#venue-2 {
-		text-align: right;
-	}
-
-	#venue-2 h2, #venue-2 h3 {
-		text-align: right;
-		display: inline-block;
-	}
-
-	#register {
-	  padding: 1em;
-	  text-align: center;
-	}
-
-	#challenges {
-
-	}
-
-	#challenges h1 {
-		text-align: center;
-	}
-
-f}
+}
 
 
 
