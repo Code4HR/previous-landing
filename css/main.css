@@ -97,6 +97,12 @@
 		background: #81cbf1;
 	}
 
+	#challenges img {
+		display: block;
+		max-width: 75px;
+		margin: 1em auto;
+	}
+
 	/********************
 	Donors
 	********************/
