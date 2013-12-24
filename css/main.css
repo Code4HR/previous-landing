@@ -108,6 +108,12 @@
 	#donors h1 {
 		color: inherit;
 	}
+
+	#donors img {
+		display: inline-block;
+		margin: 0 1em 1em;
+		max-width: 125px;
+	}
 	
 	/*******************
 	FAQ
