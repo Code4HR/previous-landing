@@ -105,6 +105,22 @@
 		display: block;
 		max-width: 75px;
 		margin: .5em auto;
+		margin-bottom: 0;
+	}
+
+	#challenges h2 {
+		margin-top: 10px;
+	}
+
+	#challenges p {
+		text-align: center;
+	}
+
+	#challenges div p:last-child {
+		font-size: 12px;
+		background: #D4ECF7;
+		border-radius: 6px;
+		padding: .5em 1em;
 	}
 
 	/********************
@@ -162,17 +178,16 @@
 		float: left;
 		max-width: 96px;
 		margin-right: .5em;
-		margin-bottom: 2em;
+	}
+
+	#challenges p {
+		padding-left: 104px;
+		text-align: left;
 	}
 
 	#challenges div p:last-child {
-		color: #399fd3;
 		text-align: right;
-		font-size: 12px;
-		background: #D4ECF7;
-		border-radius: 6px;
 		display: inline-block;
-		padding: .5em 1em;
 	}
 
 }
