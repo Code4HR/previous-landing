@@ -20,8 +20,13 @@
 
 @media screen and (min-width: 320px) {
 	
+	ul {
+		padding-left: 20px;
+	}
+
 	h1, h2, h3 {
 		text-align: center;
+		line-height: 1.25em;
 	}
 
 	h1 {
@@ -156,6 +161,10 @@
 	h1 {
 		margin-bottom: 1em;
 	}
+
+	h2, h3 {
+		text-align: left;
+	}
 	
 	/********************
 	Events 
@@ -163,6 +172,21 @@
 
 	.event h1 {
 		line-height: 200px;
+	}
+
+	.event h2 {
+		text-align: left;
+		padding: 0;
+		margin: 0;
+	}
+
+	.event h3 {
+		text-align: right;
+
+	}
+
+	.event p {
+		margin-top: 8px;
 	}
 
 	/********************
@@ -189,6 +213,20 @@
 		text-align: right;
 		display: inline-block;
 	}
+
+	/*******************
+	FAQ
+	*******************/
+
+	#faq h2 {
+		font-size: 21px;
+	}
+
+	#faq h3 {
+		font-size: 18px;
+	}
+
+
 
 }
 
