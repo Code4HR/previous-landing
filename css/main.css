@@ -94,7 +94,33 @@
 	********************/
 
 	#challenges {
-		background: #81cbf1;
+		background: #B5DEF2;
+	}
+
+	#challenges div {
+		margin-bottom: 1em;
+	}
+
+	#challenges img {
+		display: block;
+		max-width: 75px;
+		margin: .5em auto;
+		margin-bottom: 0;
+	}
+
+	#challenges h2 {
+		margin-top: 10px;
+	}
+
+	#challenges p {
+		text-align: center;
+	}
+
+	#challenges div p:last-child {
+		font-size: 12px;
+		background: #D4ECF7;
+		border-radius: 6px;
+		padding: .5em 1em;
 	}
 
 	/********************
@@ -107,6 +133,12 @@
 
 	#donors h1 {
 		color: inherit;
+	}
+
+	#donors img {
+		display: inline-block;
+		margin: 0 1em 1em;
+		max-width: 125px;
 	}
 	
 	/*******************
@@ -121,10 +153,42 @@
 
 @media screen and (min-width: 768px) {
 
+	h1 {
+		margin-bottom: 1em;
+	}
+	
+	/********************
+	Events 
+	********************/
 
+	.event h1 {
+		line-height: 200px;
+	}
 
+	/********************
+	Challenges
+	********************/
+	
+	#challenges h2 {
+		text-align: left;
+		margin-top: 8px;
+	}
 
+	#challenges img {
+		float: left;
+		max-width: 96px;
+		margin-right: .5em;
+	}
 
+	#challenges p {
+		padding-left: 104px;
+		text-align: left;
+	}
+
+	#challenges div p:last-child {
+		text-align: right;
+		display: inline-block;
+	}
 
 }
 
