@@ -94,13 +94,17 @@
 	********************/
 
 	#challenges {
-		background: #81cbf1;
+		background: #B5DEF2;
+	}
+
+	#challenges div {
+		margin-bottom: 1em;
 	}
 
 	#challenges img {
 		display: block;
 		max-width: 75px;
-		margin: 1em auto;
+		margin: .5em auto;
 	}
 
 	/********************
@@ -133,10 +137,43 @@
 
 @media screen and (min-width: 768px) {
 
+	h1 {
+		margin-bottom: 1em;
+	}
+	
+	/********************
+	Events 
+	********************/
 
+	.event h1 {
+		line-height: 200px;
+	}
 
+	/********************
+	Challenges
+	********************/
+	
+	#challenges h2 {
+		text-align: left;
+		margin-top: 8px;
+	}
 
+	#challenges img {
+		float: left;
+		max-width: 96px;
+		margin-right: .5em;
+		margin-bottom: 2em;
+	}
 
+	#challenges div p:last-child {
+		color: #399fd3;
+		text-align: right;
+		font-size: 12px;
+		background: #D4ECF7;
+		border-radius: 6px;
+		display: inline-block;
+		padding: .5em 1em;
+	}
 
 }
 
