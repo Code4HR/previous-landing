@@ -61,6 +61,17 @@
 	}
 
 	/******************
+	Preamble
+	******************/
+
+	#preamble p {
+		width: 75%;
+		font-size: 1.25em;
+		margin: 1em auto;
+		text-align: center;
+	}
+
+	/******************
 	Events
 	******************/
 
@@ -113,6 +124,10 @@
 		margin-bottom: 0;
 	}
 
+	#challenges h1 {
+		color: inherit;
+	}
+
 	#challenges h2 {
 		margin-top: 10px;
 	}
@@ -154,6 +169,27 @@
 		background: #cf1b41;
 		color: white;
 	}
+
+	/*******************
+	Contact
+	*******************/
+
+	#contact h1 {
+		color: inherit;
+	}
+
+	#contact {
+		text-align: center;
+	}
+
+	/*******************
+	attribution
+	*******************/
+
+	footer p {
+		font-size: 12px;
+	}
+
 }
 
 @media screen and (min-width: 768px) {
@@ -187,6 +223,14 @@
 
 	.event p {
 		margin-top: 8px;
+	}
+
+	/******************
+	Preamble
+	******************/
+
+	#preamble p {
+
 	}
 
 	/********************
@@ -229,6 +273,7 @@
 	/*******************
 	Contact
 	*******************/
+	
 
 	#contact h2, #contact h3 {
 		text-align: center;
