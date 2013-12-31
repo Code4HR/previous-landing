@@ -65,7 +65,6 @@
 	******************/
 
 	#preamble p {
-		width: 75%;
 		font-size: 1.25em;
 		margin: 1em auto;
 		text-align: center;
@@ -200,6 +199,14 @@
 
 	h2, h3 {
 		text-align: left;
+	}
+
+	/********************
+	Preamble
+	********************/
+
+	#preamble p {
+		width: 75%;
 	}
 	
 	/********************
