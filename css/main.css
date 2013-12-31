@@ -110,7 +110,7 @@
 	********************/
 
 	#challenges {
-		background: #B5DEF2;
+		background: #B3EEF5;
 	}
 
 	#challenges div {
@@ -148,7 +148,7 @@
 	********************/
 
 	#donors {
-
+		display: none;
 	}
 
 	#donors h1 {
