@@ -88,10 +88,11 @@
 
 	#participation h1 {
 	    background: url(../img/blue-overlay-light.png), 
-	           	   	url(../img/hatch.jpg) center center;
+	           	   	url(../img/dominion.jpg) center center;
 	}
 
 	.event h2 {
+		font-size: 21px;
 	}
 
 	.event h3 {
@@ -232,6 +233,7 @@
 	}
 
 	.event h4 {
+		margin-top: 0;
 		text-align: left;
 	}
 
