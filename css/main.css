@@ -96,9 +96,16 @@
 
 	.event h3 {
 		margin-top: 0;
-		color: #666;
+		color: #6D6E71;
 		font-size: 1.25em;
-		margin-bottom: 1em;
+		margin-bottom: .25em;
+		padding: 0;
+	}
+
+	.event h4 {
+		text-align: center;
+		font-family: Helvetica, Arial, sans-serif;
+		color: #6D6E71;
 	}
 	
 	/********************
@@ -222,7 +229,10 @@
 
 	.event h3 {
 		text-align: right;
+	}
 
+	.event h4 {
+		text-align: left;
 	}
 
 	.event p {
