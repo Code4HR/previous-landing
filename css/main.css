@@ -35,7 +35,7 @@
 		line-height: 1.25em;
 	}
 
-	#events, #challenges, #donors, #faq, #contact {
+	#events, #challenges, #donors, #faq, #contact, #activies {
 		padding: 2em 0;
 	}
 
@@ -114,7 +114,7 @@
 	********************/
 
 	#challenges {
-		background: #B3EEF5;
+		background: #cf1b41;
 	}
 
 	#challenges div {
@@ -123,7 +123,7 @@
 
 	#challenges img {
 		display: block;
-		max-width: 75px;
+		max-width: 400px;
 		margin: .5em auto;
 		margin-bottom: 0;
 	}
@@ -141,6 +141,44 @@
 	}
 
 	#challenges div p:last-child {
+		font-size: 12px;
+		background: #D4ECF7;
+		border-radius: 6px;
+		padding: .5em 1em;
+	}
+
+	/********************
+	Activies
+	********************/
+
+	#activies {
+		background: #B3EEF5;
+	}
+
+	#activies div {
+		margin-bottom: 1em;
+	}
+
+	#activies img {
+		display: block;
+		max-width: 75px;
+		margin: .5em auto;
+		margin-bottom: 0;
+	}
+
+	#activies h1 {
+		color: inherit;
+	}
+
+	#activies h2 {
+		margin-top: 10px;
+	}
+
+	#activies p {
+		text-align: center;
+	}
+
+	#activies div p:last-child {
 		font-size: 12px;
 		background: #D4ECF7;
 		border-radius: 6px;
@@ -252,24 +290,58 @@
 	/********************
 	Challenges
 	********************/
-	
+
+	#challenges h1 {
+		text-align: center;
+		color: white;
+	}	
 	#challenges h2 {
+		text-align: center;
+		margin-top: 8px;
+		color: white;
+	}
+
+	#challenges img {
+		float: top;
+		text-align: left;
+		max-width: 400px;
+		max-height: 300px;
+		margin-right: .5em;
+		margin-bottom:15px;
+	}
+
+	#challenges p {
+		text-align: center;
+		color: white;
+	}
+
+	#challenges div p:last-child {
+		text-align: right;
+		display: inline-block;
+	}
+
+	/********************
+	Activities
+	********************/
+	
+	#activities h2 {
 		text-align: left;
 		margin-top: 8px;
 	}
 
-	#challenges img {
-		float: left;
-		max-width: 96px;
+	#activities img {
+		float: top;
+		max-width: 450px;
+		max-height: 200px;
 		margin-right: .5em;
 	}
 
-	#challenges p {
+	#activities p {
 		padding-left: 104px;
 		text-align: left;
 	}
 
-	#challenges div p:last-child {
+	#activities div p:last-child {
 		text-align: right;
 		display: inline-block;
 	}
