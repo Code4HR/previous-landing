@@ -35,7 +35,7 @@
 		line-height: 1.25em;
 	}
 
-	#events, #challenges, #donors, #faq, #contact, #activies {
+	#events, #challenges, #donors, #faq, #contact, #activities {
 		padding: 2em 0;
 	}
 
@@ -148,37 +148,37 @@
 	}
 
 	/********************
-	Activies
+	Activities
 	********************/
 
-	#activies {
+	#activities {
 		background: #B3EEF5;
 	}
 
-	#activies div {
+	#activities div {
 		margin-bottom: 1em;
 	}
 
-	#activies img {
+	#activities img {
 		display: block;
 		max-width: 75px;
 		margin: .5em auto;
 		margin-bottom: 0;
 	}
 
-	#activies h1 {
+	#activities h1 {
 		color: inherit;
 	}
 
-	#activies h2 {
+	#activities h2 {
 		margin-top: 10px;
 	}
 
-	#activies p {
+	#activities p {
 		text-align: center;
 	}
 
-	#activies div p:last-child {
+	#activities div p:last-child {
 		font-size: 12px;
 		background: #D4ECF7;
 		border-radius: 6px;
@@ -323,22 +323,27 @@
 	/********************
 	Activities
 	********************/
-	
+
+	#activities h1 {
+		text-align: center;
+		color: black;
+	}	
+
 	#activities h2 {
-		text-align: left;
+		text-align: center;
 		margin-top: 8px;
 	}
 
 	#activities img {
 		float: top;
-		max-width: 450px;
-		max-height: 200px;
-		margin-right: .5em;
+		text-align: center;
+		max-width: 75px;
+        margin: .5em auto;
+        margin-bottom: 0;
 	}
 
 	#activities p {
-		padding-left: 104px;
-		text-align: left;
+		text-align: center;
 	}
 
 	#activities div p:last-child {
