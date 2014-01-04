@@ -35,8 +35,18 @@
 		line-height: 1.25em;
 	}
 
-	#events, #challenges, #donors, #faq, #contact, #activities {
+	a {
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+
+	section {
 		padding: 2em 0;
+	}
+
+	section img {
+		width: 100%;
+		margin-bottom: 1em;
 	}
 
 	/***************
@@ -115,6 +125,7 @@
 
 	#challenges {
 		background: #cf1b41;
+		color: white;
 	}
 
 	#challenges div {
@@ -125,11 +136,10 @@
 		display: block;
 		max-width: 400px;
 		margin: .5em auto;
-		margin-bottom: 0;
+		margin-bottom: 1em;
 	}
 
 	#challenges h1 {
-		color: inherit;
 	}
 
 	#challenges h2 {
@@ -138,13 +148,6 @@
 
 	#challenges p {
 		text-align: center;
-	}
-
-	#challenges div p:last-child {
-		font-size: 12px;
-		background: #D4ECF7;
-		border-radius: 6px;
-		padding: .5em 1em;
 	}
 
 	/********************
@@ -240,9 +243,7 @@
 		margin-bottom: 1em;
 	}
 
-	h2, h3 {
-		text-align: left;
-	}
+
 
 	/********************
 	Preamble
@@ -292,13 +293,9 @@
 	********************/
 
 	#challenges h1 {
-		text-align: center;
-		color: white;
 	}	
 	#challenges h2 {
-		text-align: center;
 		margin-top: 8px;
-		color: white;
 	}
 
 	#challenges img {
@@ -344,11 +341,6 @@
 
 	#activities p {
 		text-align: center;
-	}
-
-	#activities div p:last-child {
-		text-align: right;
-		display: inline-block;
 	}
 
 	/*******************
