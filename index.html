@@ -1,300 +1,340 @@
 <!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8">
-    <title>Code for Hampton Roads | A Code for America Brigade</title>
-    <meta name="description" content="Hampton Roads locals helping Virginia Beach, Norfolk and
-          the seven cities open their data and create meaningful web and mobile apps">
-    <link rel="shortcut icon" href="favicon.ico" />
-    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.min.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/js/bootstrap.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      var pluginUrl =
-      '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
-      _gaq.push(['_require', 'inpage_linkid', pluginUrl])
-      _gaq.push(['_setAccount', 'UA-39303796-1']);
-      _gaq.push(['_setDomainName', 'codeforhamptonroads.org']);
-      _gaq.push(['_trackPageview']);
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
 
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-<style>
-.memberbox{margin-top:15px; margin-bottom:10px;}
-.memberbox h2{color:#aaa; font-size:150%; margin-bottom:0}
-.carousel-caption .pix-thumb{position:relative; min-width:45px; margin-right:5px; border-radius:6px; width:45px; height:45px; background-image: url(./images/captain.png); background-size: 100% 100%;}
-.membercheckin{margin-top:20px; color:#fff}
-.carousel-caption{margin-top:100px}
-.tip{display:inline-block; position:relative}
-</style>
-  </head>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <style>
+            body {
+                padding-top: 0px;
+                padding-bottom: 20px;
+            }
+        </style>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/main.css">
 
-  <body>
+        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        
 
-    <!-- NAVBAR
-    ================================================== -->
-    <div class="navbar-wrapper">
-      <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
+    </head>
+    <body>
+        <a href="https://github.com/c4hrva/codeacross"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</str40  4ong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
       <div class="container">
+          <p><a class="btn btn-primary btn-lg" href="http://www.eventbrite.com/e/code-across-hampton-roads-tickets-9780538855?aff=es2&amp;rank=1&amp;sid=aa314a0f6a5e11e3944b22000a9f38e9">Register »</a>
+          <a class="btn btn-primary btn-lg" href="https://secure.codeforamerica.org/page/contribute/default?custom1=c4hrva">Sponsor »</a></p>
+      </div>
+    </div>
+    
+    <section id="events">
+    
+      <div class="container">
+        <div class="row">
 
-        <div class="navbar navbar-inverse">
-          <div class="navbar-inner">
-            <!-- Responsive Navbar Part 1: Button for triggering responsive navbar. Include responsive CSS to utilize. -->
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </a>
-            <a class="brand" href="#">Code for Hampton Roads</a>
-            <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
-            <div class="nav-collapse collapse">
-              <ul class="nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#meetup">Events</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <!-- Read about Bootstrap dropdowns at http://twitter.github.com/bootstrap/javascript.html#dropdowns -->
-                <li class="dropdown" id="menu1">
-                  <a href="#menu1" class="dropdown-toggle" data-toggle="dropdown">
-                    Resources
-                    <b class="caret"></b>
-                  </a>
-                  <ul class="dropdown-menu">
-                    <li>
-                      <a href="https://groups.google.com/a/codeforamerica.org/forum/#!forum/c4hrva">
-                      <i class=icon-comment icon-white></i>
-                      Our Google Groups Forum</a>
-                    </li>
-                    <li>
-                      <a href="http://www.meetup.com/Code-for-Hampton-Roads/">
-                        <i class=icon-user icon-white></i>
-                        Our Gatherings on Meetup</a>
-                    </li>
-                    <li>
-                      <a href="http://webchat.freenode.net?channels=codeforva&uio=d4">
-                        <i class=icon-bullhorn icon-white></i>
-                        Our chat on freenode IRC</a></a>
-                    </li>
-                    <li>
-                      <a href="https://github.com/c4hrva">
-                        <i class=icon-wrench icon-white></i>
-                        Our Code on GitHub</a>
-                    </li>
-                    <li>
-                      <a href="http://c4hrva.uservoice.com/">
-                      <i class=icon-thumbs-up icon-white></i>
-                      Idea List for Civic Apps and Open Data</a>
-                    </li>
-                    <li>
-                      <a href="https://docs.google.com/folder/d/0B_WC8QOgiwjzeDBPRkM2UW05ZjA/edit?usp=sharing">
-                        <i class=icon-folder-open icon-white></i>
-                        Our Docs on Google</a>
-                    </li>
+          <div id="preamble" class="col-xs-12">
 
-                    <li class="divider"></li>
-
-                    <li>
-                      <a href="https://twitter.com/search?q=%23cfabrigade">
-                        <i class=icon-retweet icon-white></i>
-                        #cfabrigade - National Tweets</a>
-                      </li>
-                    <li>
-                      <a href="http://citycamphrva.govfresh.com/">
-                        <i class=icon-bullhorn icon-white></i>
-                        Kevin's "CityCamp" Blog</a>
-                      </li>
-                    <li>
-                      <a href="http://codeforamerica.tumblr.com/">
-                        <i class=icon-bullhorn icon-white></i>
-                        Bridage's Tumblr</a>
-                      </li>
-
-                  </ul>
-                </li>
-              </ul>
-            </div><!--/.nav-collapse -->
-          </div><!-- /.navbar-inner -->
-        </div><!-- /.navbar -->
-
-      </div> <!-- /.container -->
-    </div><!-- /.navbar-wrapper -->
-
-
-  <!-- fork me banner, top right
-  ================================================== -->
-
-  <a class="forkme" href="https://github.com/c4hrva/c4hrva-landing"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 100;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
-
-
-
-    <!-- Carousel - only using one at the moment
-    ================================================== -->
-    <div class="carousel slide">
-      <div class="carousel-inner">
-        <div class="item active">
-          <!--<img id="carousel-image" src="images/sunrise-top.jpg" alt="Sunrise at the Virginia Beach Oceanfront" />-->
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>We Are Code For Hampton Roads.</h1>
-              <a class="btn btn-large btn-primary" href="http://www.meetup.com/Code-for-Hampton-Roads/">Stop By Our Meetups</a>
-              <a class="btn btn-large btn-primary" href="http://www.meetup.com/Code-for-Hampton-Roads/">Stop By Our Meetups</a>
-
-            </div>
+            <p>CodeAcross is celebration of civic innovation experienced simultaneously in dozens of Code for America cities around the globe February 21-23. This weekend also International Open Data Day. Our theme is "Beyond Transparency". Let’s take the open government movement one step further by focusing on not only making data open, but actionable.</p>
+            <p>Join us in here in Hampton Roads.</p>
           </div>
+            
+          <div id="inspiration" class="event col-sm-6">
+            <h1>Inspiration</h1>
+            <h2 class="col-sm-8">Roper Performing Arts Center</h2>
+            <h3 class="col-sm-4">4:00 PM | 2/21</h3>
+            <div class="clearfix"></div>
+            <h4>340 Granby Street , Norfolk, VA</h4>
+            <div class="clearfix"></div>
+            <p>We've been offered one of the finest theaters in the area to host an inspiring kickoff of talks, movies and demos.</p>
+        
+          </div>
+
+          <div id="participation" class="event col-sm-6">
+            <h1>Participation</h1>
+            <h2 class="col-sm-8">Dominion Enterprises</h2>
+            <h3 class="col-sm-4">9:00 AM | 2/22</h3>
+            <div class="clearfix"></div>
+            <h4>150 Granby Street, Norfolk, VA</h4>
+            <div class="clearfix"></div>
+
+            <p>We're trying to get to the top of the tower for a day of civic hacking. Stay tuned for details.</p>
+          </div>
+        
         </div>
       </div>
-    </div><!-- /.carousel -->
 
-  <hr class="featurette-divider">
+    </section>
 
+    <!-- real challenges --> 
+    <section id="challenges">
 
-  <div class="container marketing clearleft">
+      <div class="container">
+        <h1>Challenges</h1>
+        <div class="row"> 
+          <div class="col-sm-6">
+          <h2>Where's my School Bus?</h2>
+            <img src="img/challenge/school_bus.png" alt="placeholder">
+             <p>Work with or lobby VBSchools to publish their real time bus location data on the web so you don’t have to guess where your child’s bus is.
+             </p>
+          <div class="clearfix"></div>
+          
+          </div>
+          <div class="col-sm-6">
+          <h2>Open Incidents</h2>
+            <img src="img/challenge/crime.png" alt="placeholder">
+             <p>Work with crime data publishers, journalists and civic leagues to make crime data easier to use
+             </p>
+          <div class="clearfix"></div>
+          </div>
+        </div>
 
+        <div class="row"> 
+          <div class="col-sm-6">
+          <h2>Open Budget</h2>
+            <img src="img/challenge/opendata.png" alt="placeholder">
+             <p>Devise a plan to engage citizens through Open Budget</p>
+             <p>Redeploy one or more Open Budget apps in one or more cities to feature on gov web site(s), ex. vbgov.com/budget
+             </p>
+          <div class="clearfix"></div>
+          
+          </div>
+          <div class="col-sm-6">
+          <h2>Open Building</h2>
+            <img src="img/challenge/building.png" alt="placeholder">
+             <p>Work with cities in the region to publish Open Data about buildings</p>
+             <p>Redeploy Edifice or other building information app</p>
+             <p>Imagine new interfaces for Open Building data</p>
+          <div class="clearfix"></div>
+          </div>
+        </div>
+        <div class="row"> 
+          <div class="col-sm-6">
+          <h2>We the People</h2>
+            <img src="img/challenge/wethepeople.png" alt="placeholder">
+             <p>The White House petition site has transformed the way constituents are heard by their elected officials.
+             </p>
+             <p>Redeploy petitions technology for Hampton Roads.</p>
+          <div class="clearfix"></div>
+          
+          </div>
+          <div class="col-sm-6">
+          <h2>Open Health Inspection</h2>
+            <img src="img/challenge/health_inspection.png" alt="placeholder">
+             <p>Help provide easier ways  for citizens to use public health inspection data 
+             s</p>
+          <div class="clearfix"></div>
+          </div>
+        </div>        
 
+        <div class="row"> 
+          <div class="col-sm-6">
+          <h2>Library-as-a-Platform</h2>
+            <img src="img/challenge/hackstack.jpg" alt="placeholder">
+             <p>Use HRVAWiki as a platform for curating local history online</p>
+             <p>
+              Explore the concept of anchoring Open Data operations through the public library
+             </p>
+          <div class="clearfix"></div>
+          
+          </div>
+          <div class="col-sm-6">
+          <h2>Transportation</h2>
+            <img src="img/challenge/bus2.png" alt="placeholder">
+             <p>Impower citizens with public transportation data and information use traffic data and public info to improve urban planning
+            </p>
+          <div class="clearfix"></div>
+          </div>
+        </div>
 
+    </div>
+    </section>
 
-    <!-- Marketing messaging and featurettes
-    ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
+    <!-- Activities --> 
+    <section id="activities">
 
+      <div class="container">
+        <h1>Activities</h1>
 
+        <div class="row">
 
-      <!-- Three columns of text below the carousel -->
-      <div class="row">
-        <div class="span4">
-          <img src="images/captain.png" alt="CfA Brigade Captain" />
-          <h2>Come To Our Meetups</h2>
-          <p>A casual <a href="http://www.meetup.com/Code-for-Hampton-Roads/">weekly meetup</a> where
-             we work on projects and hack open data.</p>
-          <p><a class="btn" href="#meetup">View details &raquo;</a></p>
-        </div><!-- /.span4 -->
+          <div class="col-sm-6">
+            <img src="img/challenge_icons/CA_pencil.png" alt="placeholder">
+             <h2>HRVAWiki Edit-a-thon</h2>
+             <p>Spend a few hours contributing to the Hampton Roads LocalWiki</p>
+             <div class="clearfix"></div>
+             <p>Skillset: Writing, Photography, Videography</p>
+          </div>
+          
+          <div class="col-sm-6">
+            <img src="img/challenge_icons/CA_people.ong.png" alt="placeholder">
+            <h2>Wordpress Your Civic League</h2>
+            <p>Learn how to get your civic league or community organization up and running on WordPress</p>
+            <div class="clearfix"></div>
+            <p>Skillset: Web Hosting, Blogging</p>
+          </div>
 
-        <div class="span4">
-          <img src="images/community.png" alt="Community" />
-          <h2>Join Online Discussions</h2>
-          <p><a href="https://groups.google.com/a/codeforamerica.org/forum/#!forum/c4hrva">
-            An open conversation online</a> about what we're doing now and what's next. We're also on
-            freenode IRC at <a href="http://webchat.freenode.net?channels=codeforva&uio=d4">#codeforva</a>.</p>
-          <p><a class="btn" href="#groups">View details &raquo;</a></p>
-        </div><!-- /.span4 -->
+        </div>
+        <div class="row">
 
-        <div class="span4">
-          <img src="images/cfa_logo_greyscale.png" alt="Code for America" />
-          <h2>See Our Inspiration</h2>
-          <p><a href="http://codeforamerica.org/">Code for America</a> is the organization that helped inspire
-            many of us that we can change our City.
-          </p>
-          <p><a class="btn" href="#cfa">View details &raquo;</a></p>
-        </div><!-- /.span4 -->
-      </div><!-- /.row -->
+          <div class="col-sm-6">
+            <img src="img/challenge_icons/CA_megaphone.png" alt="placeholder">
+             <h2>Geeks on the Bus</h2>
+             <p>Join a group of people to ride the bus singing the praises of HRTB.us and passing out stickers.</p>
+             <div class="clearfix"></div>
+             <p>Skillset: Design, Marketing, Promotions, Social Media</p>
+          </div>
+          
+          <div class="col-sm-6">
+             <img src="img/challenge_icons/CA_leaf.png" alt="placeholder">
+             <h2>Mobile Parks and Rec</h2>
+             <p>Make the ultimate mobile app for VB Parks & Rec data.</p>
+             <div class="clearfix"></div>
+             <p>Skillset: Coding, Writing, Design</p>
+          </div>
+    
+        </div>
+        <div class="row">
 
+          <div class="col-sm-6">
+            <img src="img/challenge_icons/CA_structure.png" alt="placeholder">
+            <h2>HRVAwiki Walking Tours</h2>
+            <p>Help make routes for local art, architecture, history and more.</p>
+            <div class="clearfix"></div>
+            <p>Skillset: Writing, Coding, Design</p>
+          </div>
+          
+          <div class="col-sm-6">
+            <img src="img/challenge_icons/CA_graph.png" alt="placeholder">
+            <h2>Elected Officials / Candidate Survey</h2>
+            <p>Fork the open data survey published by Open Twin Cities. Market the survey to local and state elected officials and candidates for office. Publish the results.</p>
+            <div class="clearfix"></div>
+            <p>Skillset: Lobbying</p>
+          </div>
 
-      <!-- START THE FEATURETTES -->
+        </div>
+        <div class="row"> 
 
- <hr class="featurette-divider">
+          <div class="col-sm-6">
+            <img src="img/challenge_icons/CA_mobile.png" alt="placeholder">
+            <h2>Adopt-a-Drain</h2>
+            <p>Deploy and maintain Adopt-a app so people can adopt storm water drains.</p>
+            <p>Adopt storm water drains using the app.</p>
+            <div class="clearfix"></div>
+            <p>Skillset: App Deployment, Environmental Cleanup</p>
+          </div>
 
-      <div class="featurette">
-        <img class="featurette-image pull-left" style="padding-bottom: 75px" src="images/noun_project_756_citizen.png" alt="Citizen" id="projects" name="projects" />
-        <h2 class="featurette-heading">2014 Challenges <span class="muted">DRAFT</span></h2>
-        <p class="lead">
-          <ul class="lead">
-            <li>
-              Open Building
-              (<a href="http://hrtb.us/">demo</a>)
-              (<a href="https://github.com/c4hrva/hrt-bus-finder">code</a>)</li>
-            <li>
-              (LIVE) Hampton Roads Local Wiki
-              (<a href="http://hrvawiki.org/">wiki</a>)
-            <li>
-              (LIVE) IArtNorfolk: Local Fine Art
-              (<a href="http://iartnorfolk.com/">demo</a>)
-              (<a href="https://github.com/c4hrva/iArtNorfolk">code</a>)</li>
-            <li>
-              (pre-beta) Heat Maps of VB Traffic
-              (<a href="http://dev.bowdenweb.com/od/heatmap-js/demo/maps_heatmap_layer/gmaps-vb-adt-2012.html">demo</a>)
-              (<a href="https://github.com/jalbertbowden/vb-adt-heatmaps">code</a>)</li>
-            <li>
-              <a href="http://c4hrva.uservoice.com/">List of Future Ideas!</a>
-              Submit your Own Ideas, or Pick One To Help With</li>
-            <li>
-              <a href="http://data.codeforhamptonroads.org">List of public and open datasets in Hampton Roads</a>.
-              Use to create usefull and fun things. (<a href="http://hropendatalist.meteor.com/">old link list</a>)</li>
-          </ul>
-        </p>
+        </div> 
+
       </div>
 
-  <hr class="featurette-divider">
+    </section>
+    
+    <section id="donors">
 
-      <div class="featurette">
-        <a href="http://brigade.codeforamerica.org/">
-          <img name="cfa" id="cfa" class="featurette-image pull-right" src="images/cfa_brigade_logo.png" alt="Code for America Brigade" />
-        </a>
-        <h2 class="featurette-heading">Want To Help Your City? <span class="muted">Good, we could use your help.</span></h2>
-        <p class="lead">We are a <a href="http://brigade.codeforamerica.org/">Code for America Brigade</a>,
-          which means we're volunteers that contribute
-          our talents toward improving the way our local governments and community organizations use the web.
-          Brigade is about action and you're here because you are someone who takes action.
-          <a href="http://brigade.codeforamerica.org/pages/activities">See what kind of things brigades do</a>, or watch the
-            <a href="http://codeforamerica.org/2012/03/08/jennifer-pahlka-at-ted-video/">
-              inspirational TED talk given by Jennifer Pahlka, the founder of Code for America.</a></p>
+      <div class="container">
+        <h1>Donors</h1>
+        <div class="row">
+  
+          <a href="#"><img src="http://placehold.it/150x150" alt="sponsor logo"></a>
+          <a href="#"><img src="http://placehold.it/150x150" alt="sponsor logo"></a>
+          <a href="#"><img src="http://placehold.it/150x150" alt="sponsor logo"></a>
+          <a href="#"><img src="http://placehold.it/150x150" alt="sponsor logo"></a>
+          <a href="#"><img src="http://placehold.it/150x150" alt="sponsor logo"></a>
+          <a href="#"><img src="http://placehold.it/150x150" alt="sponsor logo"></a>
+
+        </div>
       </div>
 
-      <hr class="featurette-divider">
+    </section>
 
-      <div class="featurette">
-        <a href="http://www.meetup.com/Code-for-Hampton-Roads/">
-          <img name="meetup" id="meetup" class="featurette-image pull-left" src="images/meetup.jpg" alt="Meetup.com" />
-          </a>
-        <h2 class="featurette-heading">We Meet Often. <span class="muted">Come Join Us.</span></h2>
-        <p class="lead">View our <a href="http://www.meetup.com/Code-for-Hampton-Roads/">
-          Meetups site</a> for our next location and time. We meet every
-          Wednesday where we hack (develop) our projects,
-          or brainstorm on current issues and activities around Virginia Beach, Norfolk, and the rest. It's actually a lot of fun, with great people and usually food/drink.</p>
+    <section id="faq">
+
+      <div class="container">
+      <h1>Stuff You Should Know</h1>
+      
+        <div class="row">
+
+          <div class="col-sm-6">
+             <h2>What is Code for Hampton Roads?</h2>
+             <p>We are a <a href="http://brigade.codeforamerica.org/">Code for America Brigade</a>, which means we're volunteers that contribute our talents toward improving the way our local governments and community organizations use the web. Brigade is about action and you're here because you are someone who takes action.</p>
+          </div>
+
+          <div class="col-sm-6">
+            <h2>What is “Beyond Transparency?”</h2> 
+            <p>Beyond Transparency is a call to action for local governments, civic technologists, and the community “to examine what is needed to build an ecosystem in which open data can become the raw materials to drive more effective decision-making and efficient service delivery, spur economic activity, and empower citizens to take an active role in improving their own communities.”</p>
+          </div>
+
+        </div>
+
+        <div class="row">
+            
+          <div class="col-sm-6">
+             <h2>Who Should Get Involved?</h2>
+             <p>Coders, designers, marketers, government staff, innovators — anyone with the passion to make their city and the region better.</p>
+          </div>
+          
+          <div class="col-sm-6">
+            <h2>What Should I Bring?</h2>
+            <ul>
+              <li>Yourself</li>
+              <li>Laptop / tablet / pen and paper <br>(whatever you need to be productive)</li>
+              <li>Enthusiasm!</li>
+            </ul>
+          </div>
+       
+        </div>
+
       </div>
 
-      <hr class="featurette-divider">
+    </section>
 
-      <div class="featurette">
-        <a href="https://groups.google.com/a/codeforamerica.org/forum/#!forum/c4hrva">
-          <img name="groups" id="groups" class="featurette-image pull-right" src="images/google_groups.png" alt="Google Groups" />
-        </a>
-        <h2 class="featurette-heading">We Discuss Things Online. <span class="muted">Join and Introduce Yourself.</span></h2>
-        <p class="lead">
-          Can't make it to a meetup?  No problem. We collaborate on projects, ask for help, and post wins
-          to our <a href="https://groups.google.com/a/codeforamerica.org/forum/#!forum/c4hrva">Code for Hampton Roads forum</a> where you can get new posts in email and reply. We welcome anyone to sign-up... you might just see something you're interested in helping with. We're also in IRC chat on freenode.net channel <a href="http://webchat.freenode.net?channels=codeforva&uio=d4">#codeforva</a>.</p>
+    <section id="contact">
+      
+      <div class="container">
+        <h1>Get Involved</h1>
+         <p><a class="btn btn-primary btn-lg" href="http://www.eventbrite.com/e/code-across-hampton-roads-tickets-9780538855?aff=es2&amp;rank=1&amp;sid=aa314a0f6a5e11e3944b22000a9f38e9">Register »</a>
+          <a class="btn btn-primary btn-lg" href="https://secure.codeforamerica.org/page/contribute/default?custom1=c4hrva">Sponsor »</a></p>
+        <hr>
+        <h2>Get In Touch</h2>
+        <p>Do you have any questions about the Event or want to sponsor?</p>
+        <center><p><a class="btn btn-primary btn-lg" href="mailto:c4hrva-team@codeforamerica.org">Email us »</a></p><center>
+        </center></center>
+
       </div>
 
-      <hr class="featurette-divider">
+    </section>
 
-      <div class="featurette">
-        <img name="contact" id="contact" class="featurette-image pull-right" src="">
-        <h2 class="featurette-heading">Want Even More Info? <span class="muted">Contact Us.</span></h2>
-        <p class="lead">Our Brigade Captains are Kevin Curry (<a href="mailto:kevin@codeforamerica.org">kevin@codeforamerica.org</a> or <a href="https://twitter.com/kmcurry">@kmcurry</a>) and Bret Fisher (<a href="mailto:bret@codeforamerica.org">bret@codeforamerica.org</a> or <a href="https://twitter.com/BretFisher">@BretFisher</a>) and we want to hear from you!</p>
+    <footer>
+      <div class="container">
+        <center>
+        <p>&copy; <a href="http://codeforhamptonroads.org">Code For Hampton Roads.</a></p>
+        </center>
       </div>
+    </footer>   
 
-      <hr class="featurette-divider">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
 
-      <!-- /END THE FEATURETTES -->
+        <script src="js/vendor/bootstrap.min.js"></script>
 
+        <script src="js/main.js"></script>
 
-      <!-- FOOTER -->
-      <footer>
-        <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>...People trying to Make Newport News, Hampton, Norfolk, Portsmouth, Chesapeake, Suffolk, and Virginia Beach even better...</p>
-        <p>Built and Maintained by c4hrva (Hey that's us). Site Design Based on <a href="http://getbootstrap.com/">Bootstrap</a>, Some Images Provided by <a href="http://thenounproject.com">The Noun Project</a>.</p>
-      </footer>
-
-    </div><!-- /.container -->
-  </body>
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src='//www.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+    </body>
 </html>
