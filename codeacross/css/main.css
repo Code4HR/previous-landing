@@ -1,5 +1,4 @@
 
-
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
@@ -60,6 +59,10 @@
 	.jumbotron h1 {
 		text-transform: uppercase;
 		margin-bottom: 0;
+	}
+	
+	.jumbotron a {
+		text-transform: none;
 	}
 
 	.jumbotron .btn {
