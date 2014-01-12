@@ -196,7 +196,6 @@
 	********************/
 
 	#donors {
-		display: none;
 	}
 
 	#donors h1 {
@@ -206,7 +205,8 @@
 	#donors img {
 		display: inline-block;
 		margin: 0 1em 1em;
-		max-width: 125px;
+		max-width: 300px;
+		max-height:150px;
 	}
 
 	/*******************
