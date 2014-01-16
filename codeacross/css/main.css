@@ -206,7 +206,7 @@
 	#donors img {
 		display: inline-block;
 		margin: 1.5em 1em;
-		width: inherit;
+		max-width: 240px;
 	}
 
 	/*******************
@@ -238,6 +238,12 @@
 		font-size: 12px;
 	}
 
+}
+
+@media screen (min-width: 480px) {
+	#donor img {
+		max-width: none;
+	}
 }
 
 @media screen and (min-width: 768px) {
