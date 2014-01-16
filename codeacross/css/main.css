@@ -196,6 +196,7 @@
 	********************/
 
 	#donors {
+		text-align: center;
 	}
 
 	#donors h1 {
@@ -204,9 +205,8 @@
 
 	#donors img {
 		display: inline-block;
-		margin: 0 1em 1em;
-		max-width: 300px;
-		max-height:150px;
+		margin: 1.5em 1em;
+		width: inherit;
 	}
 
 	/*******************
@@ -306,8 +306,8 @@
 		text-align: left;
 		max-width: 400px;
 		max-height: 300px;
-		margin-right: .5em;
-		margin-bottom:15px;
+		margin: 0 auto;
+		margin-bottom: 24px;
 	}
 
 	#challenges p {
