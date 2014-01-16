@@ -43,7 +43,7 @@
 	}
 
 	section img {
-		width: 100%;
+		max-width: 100%;
 		margin-bottom: 1em;
 	}
 
@@ -136,7 +136,7 @@
 
 	#challenges img {
 		display: block;
-		max-width: 400px;
+		max-width: 100%;
 		margin: .5em auto;
 		margin-bottom: 1em;
 	}
@@ -221,12 +221,20 @@
 	Contact
 	*******************/
 
+	#contact {
+		text-align: center;
+	}
+
 	#contact h1 {
 		color: inherit;
 	}
 
 	#contact {
 		text-align: center;
+	}
+
+	#contact .btn {
+		margin-bottom: 1.5em;
 	}
 
 	/*******************
@@ -239,20 +247,14 @@
 
 }
 
-@media screen and (min-width: 480px) {
-	#donor img {
+@media screen and (min-width: 481px) {
+	#donors img {
 		max-width: none;
-		width: inherit;
+		width: inherit !important;
 	}
 }
 
 @media screen and (min-width: 768px) {
-
-	h1 {
-		margin-bottom: auto;
-	}
-
-
 
 	/********************
 	Preamble
@@ -310,8 +312,7 @@
 	#challenges img {
 		float: top;
 		text-align: left;
-		max-width: 400px;
-		max-height: 300px;
+		max-width: 100%;
 		margin: 0 auto;
 		margin-bottom: 24px;
 	}
@@ -367,6 +368,7 @@
 	/*******************
 	Contact
 	*******************/
+	
 
 
 	#contact h2, #contact h3 {
