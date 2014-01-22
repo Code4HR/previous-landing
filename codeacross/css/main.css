@@ -204,8 +204,9 @@
 
 	#donors img {
 		display: inline-block;
-		margin: 1.5em 1em;
+		margin: 1.5em .25em;
 		max-width: 240px;
+
 	}
 
 	/*******************
@@ -298,6 +299,15 @@
 	#preamble p {
 
 	}
+
+	/********************
+	Donors
+	********************/
+
+	#donors img {
+		margin: 1.5em 1em;
+	}
+
 
 	/********************
 	Challenges
