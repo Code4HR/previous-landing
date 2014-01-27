@@ -185,6 +185,8 @@
 
 	#activities div p:last-child {
 		font-size: 12px;
+		color: #5d242f;
+		font-weight: bold;
 		background: #D4ECF7;
 		border-radius: 6px;
 		padding: .5em 1em;
@@ -328,7 +330,7 @@
 	}
 
 	#challenges p {
-		text-align: center;
+		text-align: left;
 		color: white;
 	}
 
@@ -342,27 +344,31 @@
 	********************/
 
 	#activities h1 {
-		text-align: center;
+		text-align: left;
 		color: black;
 	}
 
 	#activities h2 {
-		text-align: center;
+		text-align: left;
 		margin-top: 8px;
 	}
 
 	#activities img {
-		float: top;
-		text-align: center;
+		float: left;
+		text-align: left;
 		max-width: 75px;
         margin: .5em auto;
         margin-bottom: 0;
 	}
 
 	#activities p {
-		text-align: center;
+		text-align: left;
 	}
-
+	#activities div p:last-child {
+		text-align: left;
+		background-color: orange;
+		display: inline-block;
+	}
 	/*******************
 	FAQ
 	*******************/
