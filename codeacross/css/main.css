@@ -80,6 +80,55 @@
 	}
 
 	/******************
+	Speakers
+	******************/
+
+	#speakers {
+		color: black;
+		background: rgb(179, 238, 245);
+	}
+
+	#speakers .intro {
+		text-align: center;
+	}
+
+	#speakers img {
+		background: white;
+		border: 5px solid white;
+		padding-bottom: 1em;
+	}
+
+	#speakers h1 {
+		color: black;
+	}
+
+	#speakers h2, h4 {
+		text-align: left;
+		margin: 0;
+	}
+
+	#speakers h4 {
+		font-family: Helvetica, Arial, sans-serif;
+		color: #6D6E71;
+	}
+
+	#speakers p {
+		margin: 1em 0;
+	}
+
+	#speakers ul {
+		list-style-type: none;
+		margin: 8px 0;
+		padding: 8px;
+		background: white;
+		border-radius: 6px;
+	}
+
+	#speakers ul li {
+		padding: 0 .25em;
+	}
+
+	/******************
 	Events
 	******************/
 
