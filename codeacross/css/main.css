@@ -32,6 +32,7 @@
 		font-size: 18px;
 		width: 75%;
 		margin: 2em auto;
+		margin-top: 1em;
 	}
 
 	h1 {
@@ -266,7 +267,6 @@
 		margin: 1.5em .25em;
 		max-width: 240px;
         max-height: 200px;
-
 	}
 
 	/*******************
@@ -277,6 +277,13 @@
 		background: #cf1b41;
 		color: white;
 	}
+
+	#faq .underlay {
+		background: rgba(255,255,255,.25);
+		padding: .5em 1em;
+	}
+
+
 
 	/*******************
 	Contact
@@ -374,7 +381,7 @@
 
 	#speakers img {
 		display: block;
-		max-width: 33%;
+		max-width: 40%;
 		float: left;
 		margin-right: 1em;
 		margin-bottom: .25em;
@@ -382,6 +389,10 @@
 
 	#speakers h2 {
 		font-size: 1.25em;
+	}
+
+	#speakers p {
+		font-size: 14px;
 	}
 
 	/********************
@@ -453,11 +464,17 @@
 		font-size: 18px;
 	}
 
+	#faq #involvement .underlay {
+		height: 174px;
+	}
+
+	#faq .row {
+		margin-bottom: 2em;
+	}
+
 	/*******************
 	Contact
 	*******************/
-	
-
 
 	#contact h2, #contact h3 {
 		text-align: center;
