@@ -103,6 +103,7 @@
 		background: white;
 		border: 5px solid white;
 		padding-bottom: 1em;
+
 	}
 
 	#speakers h1 {
@@ -367,6 +368,21 @@
 		margin: 1.5em 1em;
 	}
 
+	/********************
+	Speakers
+	********************/
+
+	#speakers img {
+		display: block;
+		max-width: 33%;
+		float: left;
+		margin-right: 1em;
+		margin-bottom: .25em;
+	}
+
+	#speakers h2 {
+		font-size: 1.25em;
+	}
 
 	/********************
 	Challenges
