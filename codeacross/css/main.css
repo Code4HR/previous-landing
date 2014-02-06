@@ -18,6 +18,10 @@
 
 @media screen and (min-width: 320px) {
 
+	p {
+		margin: 16px 0;
+	}
+
 	ul {
 		padding-left: 20px;
 	}
@@ -25,6 +29,12 @@
 	h1, h2, h3 {
 		text-align: center;
 		line-height: 1.25em;
+	}
+
+	h3.intro {
+		font-family: "Helvetica Neue", Helvetica, Arial, sans;
+		font-size: 18px;
+		margin: 2em 0;
 	}
 
 	h1 {
@@ -45,6 +55,11 @@
 	section img {
 		max-width: 100%;
 		margin-bottom: 1em;
+	}
+
+	.underlay {
+		background: rgba(255,255,255,.25);
+		padding: .5em 1em;
 	}
 
 	/***************
@@ -74,7 +89,7 @@
 	******************/
 
 	#preamble p {
-		font-size: 1.25em;
+		font-size: 1em;
 		margin: 1em auto;
 		text-align: center;
 	}
@@ -96,6 +111,7 @@
 		background: white;
 		border: 5px solid white;
 		padding-bottom: 1em;
+		margin-bottom: 0;
 	}
 
 	#speakers h1 {
@@ -127,6 +143,27 @@
 	#speakers ul li {
 		padding: 0 .25em;
 	}
+
+	#speakers img {
+		display: block;
+		max-width: 40%;
+		float: left;
+		margin-right: 1em;
+		margin-bottom: .25em;
+	}
+
+	#speakers h2 {
+		font-size: 1.25em;
+	}
+
+	#speakers p {
+		font-size: 14px;
+	}
+
+	#speakers .speaker {
+		margin-bottom: 1em;
+	}
+
 
 	/******************
 	Events
@@ -180,7 +217,6 @@
 	}
 
 	#challenges div {
-		margin-bottom: 1em;
 	}
 
 	#challenges img {
@@ -199,6 +235,10 @@
 
 	#challenges p {
 		text-align: center;
+	}
+
+	#challenges .underlay {
+		margin-bottom: 1em;
 	}
 
 	/********************
@@ -258,12 +298,15 @@
 		margin: 1.5em .25em;
 		max-width: 240px;
         max-height: 200px;
-
 	}
 
 	/*******************
 	FAQ
 	*******************/
+
+	#faq .question {
+		margin-bottom: 1em;
+	}
 
 	#faq {
 		background: #cf1b41;
@@ -305,9 +348,16 @@
 		max-width: none;
 		width: inherit !important;
 	}
+
+
 }
 
 @media screen and (min-width: 768px) {
+
+	h3.intro {
+		width: 75%;
+		margin: 2em auto;
+	}
 
 	/********************
 	Preamble
@@ -360,6 +410,11 @@
 		margin: 1.5em 1em;
 	}
 
+	/********************
+	Speakers
+	********************/
+
+
 
 	/********************
 	Challenges
@@ -389,6 +444,11 @@
 		display: inline-block;
 	}
 
+	#challenges .underlay {
+		min-height: 390px;
+	}
+
+
 	/********************
 	Activities
 	********************/
@@ -415,9 +475,9 @@
 	}
 	#activities div p:last-child {
 		text-align: left;
-		background-color: orange;
 		display: inline-block;
 	}
+	
 	/*******************
 	FAQ
 	*******************/
@@ -430,11 +490,16 @@
 		font-size: 18px;
 	}
 
+	#faq #involvement .underlay {
+		height: 174px;
+	}
+
+	#faq .row {
+	}
+
 	/*******************
 	Contact
 	*******************/
-	
-
 
 	#contact h2, #contact h3 {
 		text-align: center;
