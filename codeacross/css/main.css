@@ -30,9 +30,7 @@
 	h3.intro {
 		font-family: "Helvetica Neue", Helvetica, Arial, sans;
 		font-size: 18px;
-		width: 75%;
-		margin: 2em auto;
-		margin-top: 1em;
+		margin: 2em 0;
 	}
 
 	h1 {
@@ -109,7 +107,7 @@
 		background: white;
 		border: 5px solid white;
 		padding-bottom: 1em;
-
+		margin-bottom: 0;
 	}
 
 	#speakers h1 {
@@ -141,6 +139,27 @@
 	#speakers ul li {
 		padding: 0 .25em;
 	}
+
+	#speakers img {
+		display: block;
+		max-width: 40%;
+		float: left;
+		margin-right: 1em;
+		margin-bottom: .25em;
+	}
+
+	#speakers h2 {
+		font-size: 1.25em;
+	}
+
+	#speakers p {
+		font-size: 14px;
+	}
+
+	#speakers .speaker {
+		margin-bottom: 1em;
+	}
+
 
 	/******************
 	Events
@@ -325,9 +344,16 @@
 		max-width: none;
 		width: inherit !important;
 	}
+
+
 }
 
 @media screen and (min-width: 768px) {
+
+	h3.intro {
+		width: 75%;
+		margin: 2em auto;
+	}
 
 	/********************
 	Preamble
@@ -384,21 +410,7 @@
 	Speakers
 	********************/
 
-	#speakers img {
-		display: block;
-		max-width: 40%;
-		float: left;
-		margin-right: 1em;
-		margin-bottom: .25em;
-	}
 
-	#speakers h2 {
-		font-size: 1.25em;
-	}
-
-	#speakers p {
-		font-size: 14px;
-	}
 
 	/********************
 	Challenges
