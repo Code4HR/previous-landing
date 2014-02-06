@@ -55,6 +55,11 @@
 		margin-bottom: 1em;
 	}
 
+	.underlay {
+		background: rgba(255,255,255,.25);
+		padding: .5em 1em;
+	}
+
 	/***************
 	Header
 	***************/
@@ -189,7 +194,6 @@
 	}
 
 	#challenges div {
-		margin-bottom: 1em;
 	}
 
 	#challenges img {
@@ -208,6 +212,10 @@
 
 	#challenges p {
 		text-align: center;
+	}
+
+	#challenges .underlay {
+		margin-bottom: 1em;
 	}
 
 	/********************
@@ -273,17 +281,14 @@
 	FAQ
 	*******************/
 
+	#faq .question {
+		margin-bottom: 1em;
+	}
+
 	#faq {
 		background: #cf1b41;
 		color: white;
 	}
-
-	#faq .underlay {
-		background: rgba(255,255,255,.25);
-		padding: .5em 1em;
-	}
-
-
 
 	/*******************
 	Contact
@@ -423,6 +428,11 @@
 		display: inline-block;
 	}
 
+	#challenges .underlay {
+		min-height: 390px;
+	}
+
+
 	/********************
 	Activities
 	********************/
@@ -469,7 +479,6 @@
 	}
 
 	#faq .row {
-		margin-bottom: 2em;
 	}
 
 	/*******************
