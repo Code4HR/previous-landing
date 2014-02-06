@@ -18,6 +18,10 @@
 
 @media screen and (min-width: 320px) {
 
+	p {
+		margin: 16px 0;
+	}
+
 	ul {
 		padding-left: 20px;
 	}
@@ -471,9 +475,9 @@
 	}
 	#activities div p:last-child {
 		text-align: left;
-		background-color: orange;
 		display: inline-block;
 	}
+	
 	/*******************
 	FAQ
 	*******************/
