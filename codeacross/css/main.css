@@ -461,6 +461,23 @@
 		min-height: 390px;
 	}
 
+	#challenges #open-data-policy-challenge .underlay {
+		min-height: 200px;
+	}
+
+	#challenges #open-data-policy-challenge img {
+		float: left;
+		margin-right: 1.5em;		
+	}
+
+	#challenges #open-data-policy-challenge h2 {
+		text-align: left;
+	}
+
+	#challenges #open-data-policy-challenge p {
+		font-size: 1.4em;
+	}
+
 
 	/********************
 	Activities
