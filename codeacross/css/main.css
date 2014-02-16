@@ -410,6 +410,10 @@
 		margin: 1.5em 1em;
 	}
 
+	#donors .container {
+		max-width: 1120px;
+	}
+
 	/********************
 	Speakers
 	********************/
