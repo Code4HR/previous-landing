@@ -35,6 +35,7 @@
 ## Our Data
 
 * [Norfolk GIS API](http://gisapp1.norfolk.gov/ArcGIS/rest/services)
+* Check out Esri's [free ArcGIS](https://developers.arcgis.com/en/) for developers
 
 ## Partners
 
