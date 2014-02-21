@@ -13,12 +13,12 @@
 
 ## Current Apps
 
-### Oakland
+### Open Budget Oakland
 
 * [App](http://openbudgetoakland.org/)
 * [Code](https://github.com/adstiles/openbudgetoakland/tree/gh-pages)
 
-### Chicago
+### Look at Cook
 
 * [App](http://lookatcook.com/)
 * [Code](https://github.com/open-city/look-at-cook)
