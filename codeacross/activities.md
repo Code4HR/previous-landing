@@ -14,8 +14,8 @@
 
 * Fork the open data survey published by Open Twin Cities. Market the survey to local and state elected officials and candidates for office. Publish the results.
 * Skills - Lobbying
-* Chicago Councilmatic (Open City Apps)
-* Chicago Lobbyists (Open City Apps)
+* Chicago Councilmatic - [App](http://chicagocouncilmatic.org/) / [Code](https://github.com/open-city/councilmatic)
+* Chicago Lobbyists - [App](http://www.chicagolobbyists.org/) / [Code](https://github.com/open-city/chicago-lobbyists-web)
 
 ## Adopt-a-Drain
 
