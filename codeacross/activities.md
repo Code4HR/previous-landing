@@ -12,7 +12,7 @@
 
 ## Elected Officials Survey
 
-* Fork the open data survey published by Open Twin Cities. Market the survey to local and state elected officials and candidates for office. Publish the results.
+* Fork the [open data survey published by Open Twin Cities](https://docs.google.com/spreadsheet/ccc?key=0AnxjauG_7LHqdGtzTzd4MmRwdmctY19USHdrSzJCdVE#gid=0). Market the survey to local and state elected officials and candidates for office. Publish the results.
 * Skills - Lobbying
 * Chicago Councilmatic - [App](http://chicagocouncilmatic.org/) / [Code](https://github.com/open-city/councilmatic)
 * Chicago Lobbyists - [App](http://www.chicagolobbyists.org/) / [Code](https://github.com/open-city/chicago-lobbyists-web)
