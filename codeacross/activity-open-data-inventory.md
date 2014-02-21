@@ -2,15 +2,26 @@
 
 ### Do an Inventory: Where Does My City Stand on Open Data?
 
-Contribute to the [US City Open Data Census](http://us-city.census.okfn.org/), which documents which major datasets city's have (and don't) and how "open" they are. These below links are a great 10,000ft view of how a city is doing with open data. We need your help to find information about all the major datasets:
+Contribute to the [US City Open Data Census](http://us-city.census.okfn.org/), which documents which major datasets city's have (and don't) and how "open" they are. These below links are a great 10,000ft view of how a city is doing with open data. We need your help to find information about all the datasets that are typical to a municipality, listed here:
 
  * [Portsmouth Open Data Census](http://us-city.census.okfn.org/place/portsmouthva)
  * [Norfolk Open Data Census](http://us-city.census.okfn.org/place/norfolk)
  * [Virginia Beach Open Data Census](http://us-city.census.okfn.org/place/vabeach)
 
-The first step in making data actionable is to make sure the data is easily accessible. Many cities, whether they have an open data policy in place or not, have work to do in terms of making key datasets open and available in machine-readable formats. Do an evaluation of where your city stands on releasing key datasets and work with your municipal partners to come up with a plan for making all of them open and available in 2014.
+The first step in making data actionable is to make sure the data is easily accessible. Many cities, whether they have an open data policy in place or not, have work to do in terms of making key datasets open and available in machine-readable formats. 
+> Do an evaluation of where your city stands on releasing key datasets and work with your municipal partners to come up with a plan for making all of them open and available in 2014.
 
-We have an [open data portal](https://communities.socrata.com/catalog/code-for-hampton-roads/)! All of these datasets should be published there.
+### FAQ
+
+#### Q. Where can I find all the open datasets that exist for my city?
+
+#### Q. I know of some open civic data, but I need a place to store it online?
+> If you find data that is in a *machine readble* format, and it needs a home for others to download it or use an API to access it, we have two "Open Data Portals" you can store it in.
+
+* [Socrata's Community Edition](https://communities.socrata.com/catalog/code-for-hampton-roads/) is easy to use and has point-and-click charting visualizations, but requires a special account to upload datasets. Email c4hrva-team@codeforamerica.org to get write access. Read access is allowed by all.
+* Open Knowledge Foundation's CKAN http://data.codeforhamptonroads.org allows anyone to upload and use the data, and has basic visualizations and mapping support.
+
+#### Q. How do I find datasets in general?
 
 [OpenPrism](http://openprism.thomaslevine.com/) is a tool that aggregates many of the open data portals datasets out there, you can use it to compare your city’s datasets to other cities, as well as to see what data other cities provide that your city doesn’t.
 
