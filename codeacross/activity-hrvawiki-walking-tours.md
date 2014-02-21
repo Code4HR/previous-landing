@@ -1,6 +1,6 @@
 # HRVAWiki.org Walking Tours
 
-You can use locations documented in [HRVAWiki.org](www.hrvawiki.org) and some *magic* to turn them into a map walking path
+You can use locations documented in [HRVAWiki.org](http://www.hrvawiki.org) and some *magic* to turn them into a map walking path
 
 ## Examples
 
