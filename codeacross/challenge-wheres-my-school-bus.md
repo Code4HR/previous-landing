@@ -14,4 +14,4 @@
 
 ## Our Data
 
-We don't have any yet!
+We don't have any yet, but you can change that! Create a plan to lobby your city council and school board to work with us to deploy this app.
