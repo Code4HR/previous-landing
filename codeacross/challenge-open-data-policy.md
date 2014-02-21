@@ -6,4 +6,4 @@ In order to ensure that local governments are publishing data regularly and in a
 
 If your city already has an open data policy, suggest amendments for a stronger policy, help your city draft an implementation plan, or do an evaluation of the current implementation.
 
-[More Info](https://docs.google.com/a/codeforamerica.org/document/d/1ZP_qNd6Zf_AmGff3yXT91vnUlOPkXLDb6zFFH75A5h8/edit)
+### [Resources and Guidance](https://docs.google.com/a/codeforamerica.org/document/d/1ZP_qNd6Zf_AmGff3yXT91vnUlOPkXLDb6zFFH75A5h8/edit)

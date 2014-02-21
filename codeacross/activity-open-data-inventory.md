@@ -2,7 +2,11 @@
 
 ### Do an Inventory: Where Does My City Stand on Open Data?
 
-Contribute to the [US City Open Data Census](http://us-city.census.okfn.org/)
+Contribute to the [US City Open Data Census](http://us-city.census.okfn.org/), which documents which major datasets city's have (and don't) and how "open" they are. These below links are a great 10,000ft view of how a city is doing with open data. We need your help to find information about all the major datasets:
+
+ * [Portsmouth Open Data Census](http://us-city.census.okfn.org/place/portsmouthva)
+ * [Norfolk Open Data Census](http://us-city.census.okfn.org/place/norfolk)
+ * [Virginia Beach Open Data Census](http://us-city.census.okfn.org/place/vabeach)
 
 The first step in making data actionable is to make sure the data is easily accessible. Many cities, whether they have an open data policy in place or not, have work to do in terms of making key datasets open and available in machine-readable formats. Do an evaluation of where your city stands on releasing key datasets and work with your municipal partners to come up with a plan for making all of them open and available in 2014.
 

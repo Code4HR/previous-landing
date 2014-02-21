@@ -1,10 +1,5 @@
 # Activities
 
-## HRVAWiki Edit-a-thon
-
-* Spend a few hours contributing to our LocalWiki
-* Skills - Writing, Photography, Videography
-
 ## Wordpress Your Civic League
 
 * Learn how to get your civic league or community organization up and running on WordPress
@@ -14,16 +9,6 @@
 
 * Join a group of people to ride the bus singing the praises of HRTB.us and passing out stickers
 * Skills - Design, Marketing, Promotions, Social Media
-
-## Mobile Parks and Rec
-
-* Make the ultimate mobile app for VB Parks & Rec data
-* Skills - Coding, Design, Writing
-
-## HRVAwiki Walking Tours
-
-* Help make routes for local art, architecture, history and more.
-* Skills - Writing, Coding, Design
 
 ## Elected Officials Survey
 
