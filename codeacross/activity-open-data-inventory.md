@@ -13,7 +13,11 @@ The first step in making data actionable is to make sure the data is easily acce
 
 ### FAQ
 
+#### Q. Some of these datasets are complicated. Any background on them?
+
+
 #### Q. Where can I find all the open datasets that exist for my city?
+> One trick it to narrow google search to just your city website and just file types you are looking for, e.g. "filetype:xls site:vbgov.com" or "filetype:pdf site:norfolk.gov"
 
 #### Q. I know of some open civic data, but I need a place to store it online?
 > If you find data that is in a *machine readble* format, and it needs a home for others to download it or use an API to access it, we have two "Open Data Portals" you can store it in.
