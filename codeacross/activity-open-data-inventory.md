@@ -14,7 +14,11 @@ The first step in making data actionable is to make sure the data is easily acce
 ### FAQ
 
 #### Q. Some of these datasets are complicated. Any background on them?
-
+> * [Asset Disclosure](https://docs.google.com/document/d/18iLpU0Ljo-rOKN4R_t1kyfTT0vglmbW4CIUgk8E28rA/edit#bookmark=id.3c14e6allgpv)
+> * [Campaign Finance](https://docs.google.com/document/d/1VVGUpcyZBR-CB5_b96gT-JDO-G74A84jHXUcPQv_tI0/edit#bookmark=kix.lw0d0b3aoc5o)
+> * [Crime](https://docs.google.com/a/sunlightfoundation.com/document/d/1IFHRbKVSlKFpOuTJL1YE2mo5i7qNezlUMi1DHpK27rw/edit#bookmark=kix.sq0rvi1hp8ph)
+> * [Registered Lobbyist Activity](https://docs.google.com/document/d/150G2K0PhiSasciqXHdkPI39y77pWe8DqS7EzP_Kfo5A/edit)
+> * [Zoning](https://docs.google.com/document/d/1BV4vmAmL9gh9CZkx6u_Ea3WF9VdLC7D6GeLStBcGP04/edit?pli=1#)
 
 #### Q. Where can I find all the open datasets that exist for my city?
 > One trick it to narrow google search to just your city website and just file types you are looking for, e.g. "filetype:xls site:vbgov.com" or "filetype:pdf site:norfolk.gov"
