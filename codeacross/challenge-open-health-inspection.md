@@ -35,4 +35,3 @@ Partnership between Yelp & CfA
 * http://hamptonroads.com/newsdata/restaurant-inspections
 * http://www.city-data.com/va-restaurants/
 * http://www.dailypress.com/health/dp-now-restaurants.0820,0,6938748.htmlstory
-* 
