@@ -4,16 +4,16 @@
 
 Improving accessibility of resturant inspection data. Create a LIVES-based feed of Virignia resturant inspection results that can be fed to Yelp and other online resturant/food finders.
 
-## Wanted
-
-* Data Publishing
+Video: [Open Health Inspection Data: Getting Started with LIVES](http://vimeo.com/58224478)
 
 ## Current Efforts
 
-### LIVES
+* [open-health-inspection-scraper](https://github.com/c4hrva/open-health-inspection-scraper)
+* [open-health-inspection-app](https://github.com/c4hrva/open-health-inspection-app)
 
-Partnership between Yelp & CfA
+## LIVES Data Standard
 
+* Partnership between Yelp & CfA
 * [Local Inspector Value-entry Specification](http://foodinspectiondata.us/)
 * [Yelp Announcement](http://officialblog.yelp.com/2013/01/introducing-lives.html)
 * [Yelp LIVES standard](http://www.yelp.com/healthscores)
@@ -25,10 +25,10 @@ Partnership between Yelp & CfA
 ## Partners
 
 * Department of Health
-* Health Space
+* Health Space (hosts data for Virginia)
 * LIVES Working Group
 
-### Sites that list current Virginia DoH Inspection data
+### 3rd Party Sites That List Current Virginia DoH Resturant Inspection Data
 
 * http://hamptonroads.com/newsdata/restaurant-inspections/locality/virginia-beach
 * http://datacenter.timesdispatch.com/health_inspections/
