@@ -14,7 +14,7 @@ Video: [Open Health Inspection Data: Getting Started with LIVES](http://vimeo.co
 ## LIVES Data Standard
 
 * Partnership between Yelp & CfA
-* [Local Inspector Value-entry Specification](http://foodinspectiondata.us/)
+* [CfA Call to Action for Publishing Resturant Inspection Data via LIVES Standard](http://foodinspectiondata.us/)
 * [Yelp Announcement](http://officialblog.yelp.com/2013/01/introducing-lives.html)
 * [Yelp LIVES standard](http://www.yelp.com/healthscores)
 
