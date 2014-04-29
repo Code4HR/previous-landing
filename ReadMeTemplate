@@ -1,15 +1,15 @@
-What you see in *bold* is the title of the section that the Readme MUST have. Following the title of the section is a brief description of the what's required for that section. If you would like to add another section to your read me, you are welcome to, but it must have all these sections at a minimum.
+What you see in **bold** is the title of the section that the Readme MUST have. Following the title of the section is a brief description of the what's required for that section. If you would like to add another section to your read me, you are welcome to, but it must have all these sections at a minimum.
 
 **Name of Project**
 
-*Description* - Minimum of 3 sentences long. Must mention what language the code is being written in (this does not count towards the 3 sentence minimum). Must be a non-technical worded description so even people who do not know the technical languages can understand what is being done. 
+**Description** - Minimum of 3 sentences long. Must mention what language the code is being written in (this does not count towards the 3 sentence minimum). Must be a non-technical worded description so even people who do not know the technical languages can understand what is being done. 
 
-*Current Features* - What the features are, and their descriptions, that the program currently has.
+**Current Features** - What the features are, and their descriptions, that the program currently has.
 
-*Future Features* - What the currently hoped for future features, and their descriptions, of the program.
+**Future Features** - What the currently hoped for future features, and their descriptions, of the program.
 
-*Project Leader* - Name of leader and minimum one way to contact the leader.
+**Project Leader** - Name of leader and minimum one way to contact the leader.
 
-*Contributors* - List of active contributors
+**Contributors** - List of active contributors
 
-*License* - Because this is a "Code for Miami" project, all projects MUST be open source. (www.choosealicense.com)
+**License** - Because this is a "Code for Miami" project, all projects MUST be open source. (www.choosealicense.com)
