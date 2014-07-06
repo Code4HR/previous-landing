@@ -1,17 +1,20 @@
 http://codeforhamptonroads.org
 ===================
-
-###Coming Soon Summer 2013: Turning this into a Template for New Brigade Sites to Fork###
-
 Landing page for *Code for Hampton Roads*
-
+---
 Note that branch `gh-pages` is what shows on production codeforhamptonroads.org. Master does nothing.
 
 #How to Code for this Repo
 Option A: Fork, Edit, then Pull Request when ready.
 Option B: If in the Hampton Road's Brigade and you have write access to repo: Develop/test in your own branch, preferablly a feature-named-branch, and once it's ready for production, merge into gh-pages, which auto deploys to GitHub pages for codeforhamptonroads.org
 
-Also, it's nice if you merge/commit to gh-pages, that you [let the team know on our Google Group](https://groups.google.com/a/codeforamerica.org/forum/#!forum/c4hrva). 
+Also, it's nice if you merge/commit to gh-pages, that you [let the team know on our Google Group](https://groups.google.com/a/codeforamerica.org/forum/#!forum/c4hrva).
+
+Brigade Template 
+---
+cfa-brigade-template
+Thanks @jandjorgensen for creating a forkable brigade template. Feel free to fork ours but this one is a clean one that is configured using YAML and Jekyll
+https://github.com/jandjorgensen/cfa-brigade-template
 
 #License
 [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)
