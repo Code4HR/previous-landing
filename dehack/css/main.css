@@ -68,7 +68,8 @@
 
 	.jumbotron {
 		padding: 30px 10px;
-		background:url(../img/code_across_banner.png) no-repeat center center, #B3EEF5;
+		background:url(../img/dehackguy.png) no-repeat center center, #B3EEF5;
+		background-size: 250px 250px;
 	}
 
 	.jumbotron h1 {
