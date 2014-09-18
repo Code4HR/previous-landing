@@ -8,18 +8,23 @@
   },
   "dependencies": {
     "handlebars": "^2.0.0",
+    "lodash": "^2.4.1",
     "metalsmith": "^0.10.0",
+    "metalsmith-assets": "0.0.1",
+    "metalsmith-build-date": "^0.1.0",
     "metalsmith-collections": "^0.6.0",
     "metalsmith-copy": "^0.1.2",
     "metalsmith-drafts": "^0.0.1",
     "metalsmith-markdown": "^0.2.1",
     "metalsmith-permalinks": "^0.4.0",
+    "metalsmith-redirect": "0.0.3",
     "metalsmith-templates": "^0.5.2",
     "metalsmith-watch": "^0.1.1"
   },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node build.js",
+    "start": "node build.js"
   },
   "repository": {
     "type": "git",
@@ -30,5 +35,8 @@
   "bugs": {
     "url": "https://github.com/c4hrva/c4hrva-landing/issues"
   },
-  "homepage": "https://github.com/c4hrva/c4hrva-landing/"
+  "homepage": "https://github.com/c4hrva/c4hrva-landing/",
+  "devDependencies": {
+    "express": "^4.9.1"
+  }
 }
