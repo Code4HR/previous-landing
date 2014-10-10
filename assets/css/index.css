@@ -2,10 +2,10 @@
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 
-body {
+/*body {
   padding-bottom: 40px;
   color: #5a5a5a;
-}
+}*/
 
 
 
@@ -13,16 +13,16 @@ body {
 -------------------------------------------------- */
 
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
-.navbar-wrapper {
+/*.navbar-wrapper {
   position: absolute;
   top: 0;
   right: 0;
   left: 0;
   z-index: 20;
-}
+}*/
 
 /* Flip around the padding for proper display in narrow viewports */
-.navbar-wrapper > .container {
+/*.navbar-wrapper > .container {
   padding-right: 0;
   padding-left: 0;
 }
@@ -32,7 +32,7 @@ body {
 }
 .navbar-wrapper .navbar .container {
   width: auto;
-}
+}*/
 
 
 /* CUSTOMIZE THE CAROUSEL

@@ -43,7 +43,8 @@ Metalsmith(__dirname)
   .metadata({
     partials: {  //reusable handlbar html parts
       header: 'header',
-      footer: 'footer'
+      footer: 'footer',
+      navbar: 'navbar'
     }
   })
   .use(assets({
