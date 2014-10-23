@@ -1,6 +1,6 @@
 http://codeforhamptonroads.org
 ===================
-Landing page for *Code for Hampton Roads*
+Old 2012-2014 Landing page for *Code for Hampton Roads*
 ---
 Note that branch `gh-pages` is what shows on production codeforhamptonroads.org. Master does nothing.
 
@@ -10,7 +10,7 @@ Option B: If in the Hampton Road's Brigade and you have write access to repo: De
 
 Also, it's nice if you merge/commit to gh-pages, that you [let the team know on our Google Group](https://groups.google.com/a/codeforamerica.org/forum/#!forum/c4hrva).
 
-Brigade Template 
+Brigade Template
 ---
 cfa-brigade-template
 Thanks @jandjorgensen for creating a forkable brigade template. Feel free to fork ours but this one is a clean one that is configured using YAML and Jekyll
