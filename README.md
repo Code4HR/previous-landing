@@ -1,7 +1,7 @@
-http://betanyc.org
+http://betanyc.us
 ===================
 
-Landing page for BetaNYC.org
+Landing page for BetaNYC.us
 
 Note that branch `gh-pages` is what shows on production BetaNYC.org. Master does nothing.
 
