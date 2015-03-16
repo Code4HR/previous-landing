@@ -18,5 +18,5 @@ Also, it's nice if you merge/commit to gh-pages, then [let the team know in the 
 #Attribution and Thanks
 This repo and the site codeforvirginiabeach.org uses Twitter Bootstrap and started from their [Carousel jumbotron](http://twitter.github.com/bootstrap/examples/carousel.html) template. They are awesome.
 
-#Issues, Questions, Wana Help?
+#Issues, Questions, Wanna Help?
 We take Pull Requests! See http://betanyc.us for getting involved, and http://brigade.codeforamerica.org if outside New York City. Use github's issues if you see a problem or have a feature request. You can contact the maintainer Noel Hidalgo at noel@beta.nyc or @betanyc.
