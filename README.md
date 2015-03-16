@@ -8,7 +8,7 @@ Note that branch `gh-pages` is what shows on production BetaNYC.org. Master does
 #How to Code for this Repo
 Option A: Fork, Edit, then Pull Request when ready.
 
-Option B: If in the BetaNYC brigade and you have write access to repo: Develop/test in your own branch, preferablly a feature-named-branch, and once it's ready for production, merge into gh-pages, which auto deploys to GitHub pages for BetaNYC.org
+Option B: If in the BetaNYC brigade and you have write access to repo: Develop/test in your own branch, preferably a feature-named-branch, and once it's ready for production, merge into gh-pages, which auto deploys to GitHub pages for BetaNYC.org
 
 Also, it's nice if you merge/commit to gh-pages, then [let the team know in the discussion group](http://www.meetup.com/betanyc/messages/archive/). 
 
